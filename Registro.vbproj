@@ -63,7 +63,9 @@
     <Reference Include="C1.Win.ExpressionEditor.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="C1.Win.Input.MultiSelect.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="C1.Win.TreeView.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

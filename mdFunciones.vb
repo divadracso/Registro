@@ -16,7 +16,7 @@ Module mdFunciones
             '    Dim categoria As String = row("Status del avalúo").ToString()
             '    If categoria = "CANCELADO" Then
             '        row.StyleNew.BackColor = Color.Red
-            '        'ElseIf categoria = "Verduras" Then
+            '        'ElseIf categoria = "Verduras" Thena
             '        '    row.Style = estiloVerduras
             '    End If
             'If row.Item("Status_del_avalúo") <> Nothing Then

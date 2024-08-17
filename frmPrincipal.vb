@@ -23,17 +23,10 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Registro' Puede moverla o quitarla según sea necesario.
         Me.RegistroTableAdapter.Fill(Me.ProDSet.Registro)
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
         Me.ContactoTableAdapter.Fill(Me.ProDSet.Contacto)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Registro' Puede moverla o quitarla según sea necesario.
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
         'TODO: esta línea de código carga datos en la tabla 'ProDSet1.Municipio' Puede moverla o quitarla según sea necesario.
         Me.MunicipioTableAdapter.Fill(Me.ProDSet.Municipio)
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.TipoAva' Puede moverla o quitarla según sea necesario.

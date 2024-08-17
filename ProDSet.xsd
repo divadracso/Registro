@@ -1114,8 +1114,7 @@ HAVING       (Contacto = ?)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Registro_Notas" msdata:parent="Registro" msdata:child="Notas" msdata:parentkey="Id" msdata:childkey="idRegistro" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Notas" msprop:Generator_RelationVarName="relationRegistro_Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="Registro_Notas" msprop:Generator_ParentPropName="RegistroRow" />
-      <msdata:Relationship name="Contacto_Pagos" msdata:parent="Contacto" msdata:child="Pagos" msdata:parentkey="id idRegistro" msdata:childkey="idCont idAva" msprop:Generator_UserParentTable="Contacto" msprop:Generator_UserChildTable="Pagos" msprop:Generator_RelationVarName="relationContacto_Pagos" msprop:Generator_ChildPropName="GetPagosRows" msprop:Generator_ParentPropName="ContactoRowParent" msprop:Generator_UserRelationName="Contacto_Pagos" />
+      <msdata:Relationship name="Registro_Notas" msdata:parent="Registro" msdata:child="Notas" msdata:parentkey="Id" msdata:childkey="idRegistro" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Notas" msprop:Generator_RelationVarName="relationRegistro_Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_ParentPropName="RegistroRow" msprop:Generator_UserRelationName="Registro_Notas" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

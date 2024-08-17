@@ -5,7 +5,6 @@ Imports System.Threading
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports C1.Win
 Imports C1.Win.C1FlexGrid
-Imports C1.Win.C1FlexGrid.Classic
 Imports C1.Win.C1Input
 Imports Registro.ProDSetTableAdapters
 

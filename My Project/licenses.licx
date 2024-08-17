@@ -5,7 +5,6 @@ C1.Win.C1List.C1Combo, C1.Win.C1List.4, Version=4.0.20203.457, Culture=neutral, 
 C1.Win.C1Input.C1ComboBox, C1.Win.C1Input.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a
 C1.Win.C1FlexGrid.C1FlexGridSearchPanel, C1.Win.C1FlexGrid.SearchPanel.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da
 C1.Win.C1Input.C1Button, C1.Win.C1Input.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a
-C1.Win.C1FlexGrid.Classic.C1FlexGridClassic, C1.Win.C1FlexGrid.Classic.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da
 C1.Win.C1SplitContainer.C1SplitContainer, C1.Win.C1SplitContainer.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da
 C1.Win.C1FlexGrid.C1FlexGridGroupPanel, C1.Win.C1FlexGrid.GroupPanel.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da
 C1.Win.Input.C1CheckList, C1.Win.Input.MultiSelect.4, Version=4.0.20203.457, Culture=neutral, PublicKeyToken=79882d576c6336da

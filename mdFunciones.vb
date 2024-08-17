@@ -48,17 +48,25 @@ Module mdFunciones
     End Sub
     Public Sub guardar()
         frmPrincipal.Validate()
+        frmPrincipal.RegistroPagosBindingSource.EndEdit()
+        actualizaPagos(frmPrincipal.ProDSet.Pagos, frmPrincipal.IdTextBox.Text, IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text))
+
+        'frmPrincipal.C1FlexPagos.Item(1, "idCont") = IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text)
+
         ' frmPrincipal.RegistroBindingSource.EndEdit()
         frmPrincipal.NotasBindingSource.EndEdit()
         frmPrincipal.RegistroBindingSource.EndEdit()
         frmPrincipal.ContactoBindingSource.EndEdit()
-        'frmPrincipal.PagosBindingSource.EndEdit() 'emdd Update(frmPrincipal.ProDSet)
-        frmPrincipal.TableAdapterManager.UpdateAll(frmPrincipal.ProDSet)
-        'frmPrincipal.RegistroDataGridView.SuspendLayout()
-        'frmPrincipal.ContactoTableAdapter.Fill(frmPrincipal.ProDSet.Contacto)
 
+        frmPrincipal.RegistroPagosBindingSource.EndEdit() 'emdd Update(frmPrincipal.ProDSet)
+        'frmPrincipal.TableAdapterManager.UpdateAll(frmPrincipal.ProDSet)
+        'frmPrincipal.RegistroDataGridView.SuspendLayout()
+        ' frmPrincipal.PagosBindingSource.EndEdit()
+        'frmPrincipal.ContactoTableAdapter.Fill(frmPrincipal.ProDSet.Contacto)
+        frmPrincipal.TableAdapterManager.UpdateAll(frmPrincipal.ProDSet)
         '' Console.WriteLine("registros guardados")
         'frmPrincipal.RegistroDataGridView.ResumeLayout()
+        ' actualizaPagos(frmPrincipal.ProDSet.Pagos, frmPrincipal.IdTextBox.Text, IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text))
 
     End Sub
     'Public Sub agregaContacto()
@@ -286,5 +294,26 @@ Module mdFunciones
         frmPrincipal.C1txtNotas.ReadOnly = True
 
     End Sub
+    Public Function IdContacto(dtbuscar As DataTable, contacto As String) As Integer
+        For Each row As DataRow In dtbuscar.Rows
+            If row("Contacto") = contacto Then
+                Return row("id")
+                'row("Status del Avalúo") = newValor
+                Console.WriteLine("ID: " & row("id"))
+                Exit For
+            End If
+        Next
+    End Function
+    Public Sub actualizaPagos(dtbuscar As DataTable, idAva As Integer, newValor As Integer)
+        For Each row As DataRow In dtbuscar.Rows
+            If row("idAva") = idAva Then
+                'row("IdContacto") =
+                row("idCont") = newValor
+                Console.WriteLine("ID: " & row("id"))
+                'Exit For
+            End If
+        Next
+    End Sub
+
 
 End Module

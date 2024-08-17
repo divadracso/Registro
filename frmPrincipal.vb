@@ -11,17 +11,22 @@ Imports Registro.ProDSetTableAdapters
 Public Class frmPrincipal
 
     Private Sub RegistroBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles RegistroBindingNavigatorSaveItem.Click
-        'Me.Validate()
-        'Me.RegistroBindingSource.EndEdit()
-        'Me.NotasBindingSource.EndEdit()
-        ''ContactoTableAdapter.Fill(ProDSet.Contacto)
-        'Me.TableAdapterManager.UpdateAll(Me.ProDSet)
+
         guardar()
         MsgBox("Información Guardada")
         ' Me.RegistroTableAdapter.Fill(Me.ProDSet.Registro)
+        'Me.PagosTableAdapter.Fill(ProDSet.Pagos)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
+        Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
+        ''TODO: esta línea de código carga datos en la tabla 'ProDSet.Registro' Puede moverla o quitarla según sea necesario.
+        'Me.RegistroTableAdapter.Fill(Me.ProDSet.Registro)
+        ''TODO: esta línea de código carga datos en la tabla 'ProDSet.Notas' Puede moverla o quitarla según sea necesario.
+        Me.NotasTableAdapter.Fill(Me.ProDSet.Notas)
+        'TODO: esta línea de código carga datos en la tabla 'ProDSet1.Pagos' Puede moverla o quitarla según sea necesario.
+        'TODO: esta línea de código carga datos en la tabla 'ProDSet1.Pagos' Puede moverla o quitarla según sea necesario.
         Me.RegistroTableAdapter.Fill(Me.ProDSet.Registro)
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
@@ -201,7 +206,7 @@ Public Class frmPrincipal
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim row As DataGridViewRow = Me.RegistroDataGridView.CurrentRow
+        ' Dim row As DataGridViewRow = Me.RegistroDataGridView.CurrentRow
         If Labeltick.Visible = True Then
             Labeltick.Visible = False
             Labeltick.ForeColor = Color.FromArgb(30, 57, 91)
@@ -265,7 +270,7 @@ Public Class frmPrincipal
         ''End If
 
     End Sub
-    Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles RegistroDataGridView.DataBindingComplete
+    Private Sub DataGridView1_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs)
         ' Realiza acciones después de llenar el DataGridView
         'For Each row As DataGridViewRow In DataGridView1.Rows
         '    If row.Cells("Nombre").Value.ToString() = "María" Then
@@ -273,22 +278,22 @@ Public Class frmPrincipal
         '    End If
         'Next
         'Dim row As DataGridViewRow ' RegistroDataGridView
-        For Each row As DataGridViewRow In RegistroDataGridView.Rows
-            If row.Cells("Status_del_avalúo").Value IsNot Nothing AndAlso row.Cells("Status_del_avalúo").Value.ToString = "Entregado y Cerrado" Then
-                row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 210)
-            End If
-            If row.Cells("Status_del_avalúo").Value IsNot Nothing AndAlso row.Cells("Status_del_avalúo").Value.ToString = "Cancelado" Then
-                row.DefaultCellStyle.BackColor = Color.Red
-            End If
-            If row.Cells("Cliente").Value IsNot Nothing AndAlso row.Cells("Cliente").Value.ToString = "IMSS" Then
-                row.DefaultCellStyle.BackColor = Color.AliceBlue
-            End If
+        'For Each row As DataGridViewRow In RegistroDataGridView.Rows
+        '    If row.Cells("Status_del_avalúo").Value IsNot Nothing AndAlso row.Cells("Status_del_avalúo").Value.ToString = "Entregado y Cerrado" Then
+        '        row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 210)
+        '    End If
+        '    If row.Cells("Status_del_avalúo").Value IsNot Nothing AndAlso row.Cells("Status_del_avalúo").Value.ToString = "Cancelado" Then
+        '        row.DefaultCellStyle.BackColor = Color.Red
+        '    End If
+        '    If row.Cells("Cliente").Value IsNot Nothing AndAlso row.Cells("Cliente").Value.ToString = "IMSS" Then
+        '        row.DefaultCellStyle.BackColor = Color.AliceBlue
+        '    End If
 
-            'Else
+        'Else
 
-            '    row.DefaultCellStyle.BackColor = Color.White
-            'End If
-        Next
+        '    row.DefaultCellStyle.BackColor = Color.White
+        ' 'End If
+        '   Next
 
 
     End Sub

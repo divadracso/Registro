@@ -22,6 +22,7 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim Tipo_de_avalúoLabel As System.Windows.Forms.Label
         Dim Núm_escr_o_de_clienteLabel As System.Windows.Forms.Label
         Dim MunicipioLabel As System.Windows.Forms.Label
@@ -36,21 +37,19 @@ Partial Class frmPrincipal
         Dim Status_del_avalúoLabel As System.Windows.Forms.Label
         Dim IdLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.RegistroBindingSource = New System.Windows.Forms.BindingSource()
+        Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProDSet = New Registro.ProDSet()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.C1FlexGridSearchPanel1 = New C1.Win.C1FlexGrid.C1FlexGridSearchPanel()
-        Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.C1CboMun = New C1.Win.C1List.C1Combo()
-        Me.MunicipioBindingSource = New System.Windows.Forms.BindingSource()
+        Me.MunicipioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1CboTipo = New C1.Win.C1List.C1Combo()
-        Me.TipoAvaBindingSource = New System.Windows.Forms.BindingSource()
+        Me.TipoAvaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1CboCli = New C1.Win.C1List.C1Combo()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GpoStatus = New System.Windows.Forms.GroupBox()
         Me.rbtnCancel = New System.Windows.Forms.RadioButton()
         Me.rbtnProceso = New System.Windows.Forms.RadioButton()
@@ -62,12 +61,12 @@ Partial Class frmPrincipal
         Me.rbtnEnCe = New System.Windows.Forms.RadioButton()
         Me.Labeltick = New System.Windows.Forms.Label()
         Me.C1CboSol = New C1.Win.C1List.C1Combo()
-        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource()
+        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1TextBox9 = New C1.Win.C1Input.C1TextBox()
         Me.C1TextBox8 = New C1.Win.C1Input.C1TextBox()
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator()
+        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem1 = New System.Windows.Forms.ToolStripButton()
-        Me.NotasBindingSource = New System.Windows.Forms.BindingSource()
+        Me.NotasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BindingNavigatorCountItem1 = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem1 = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem1 = New System.Windows.Forms.ToolStripButton()
@@ -85,7 +84,7 @@ Partial Class frmPrincipal
         Me.C1Button1 = New C1.Win.C1Input.C1Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.C1DateSol = New C1.Win.Calendar.C1DateEdit()
-        Me.RegistroBindingNavigator = New System.Windows.Forms.BindingNavigator()
+        Me.RegistroBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
@@ -106,38 +105,28 @@ Partial Class frmPrincipal
         Me.C1txtNotas = New C1.Win.C1Input.C1TextBox()
         Me.txtPagos = New System.Windows.Forms.TextBox()
         Me.C1SplitterPanel2 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.C1FlexGridGroupPanel1 = New C1.Win.C1FlexGrid.C1FlexGridGroupPanel()
-        Me.RegistroDataGridView = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FolioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DomicilioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MunicipioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SolicitadoPorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Campo10DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StatusDelPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Status_del_avalúo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pagos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C1SplitterPanel3 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContactoDataGridView = New System.Windows.Forms.DataGridView()
         Me.IdDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdRegistroDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContactoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Timer1 = New System.Windows.Forms.Timer()
-        Me.miniToolStrip = New System.Windows.Forms.BindingNavigator()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.miniToolStrip = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.RegistroTableAdapter = New Registro.ProDSetTableAdapters.RegistroTableAdapter()
         Me.TableAdapterManager = New Registro.ProDSetTableAdapters.TableAdapterManager()
         Me.NotasTableAdapter = New Registro.ProDSetTableAdapters.NotasTableAdapter()
-        Me.TipoBindingSource = New System.Windows.Forms.BindingSource()
+        Me.TipoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TipoTableAdapter = New Registro.ProDSetTableAdapters.TipoTableAdapter()
         Me.ClienteTableAdapter = New Registro.ProDSetTableAdapters.ClienteTableAdapter()
         Me.TipoAvaTableAdapter = New Registro.ProDSetTableAdapters.TipoAvaTableAdapter()
         Me.MunicipioTableAdapter = New Registro.ProDSetTableAdapters.MunicipioTableAdapter()
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
+        Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
+        Me.RegistroPagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1FlexPagos = New C1.Win.C1FlexGrid.C1FlexGrid()
         Tipo_de_avalúoLabel = New System.Windows.Forms.Label()
         Núm_escr_o_de_clienteLabel = New System.Windows.Forms.Label()
         MunicipioLabel = New System.Windows.Forms.Label()
@@ -156,7 +145,6 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.SuspendLayout()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CboTipo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -183,11 +171,14 @@ Partial Class frmPrincipal
         CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitterPanel2.SuspendLayout()
-        CType(Me.RegistroDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitterPanel3.SuspendLayout()
+        CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1FlexPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Tipo_de_avalúoLabel
@@ -324,7 +315,7 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1.Panels.Add(Me.C1SplitterPanel1)
         Me.C1SplitContainer1.Panels.Add(Me.C1SplitterPanel2)
         Me.C1SplitContainer1.Panels.Add(Me.C1SplitterPanel3)
-        Me.C1SplitContainer1.Size = New System.Drawing.Size(764, 1061)
+        Me.C1SplitContainer1.Size = New System.Drawing.Size(764, 756)
         Me.C1SplitContainer1.SplitterColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.C1SplitContainer1.TabIndex = 38
         Me.C1SplitContainer1.ToolTipGradient = C1.Win.C1SplitContainer.ToolTipGradient.Blue
@@ -371,12 +362,12 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.Controls.Add(MunicipioLabel)
         Me.C1SplitterPanel1.Controls.Add(Núm_escr_o_de_clienteLabel)
         Me.C1SplitterPanel1.Controls.Add(Tipo_de_avalúoLabel)
-        Me.C1SplitterPanel1.Height = 378
+        Me.C1SplitterPanel1.Height = 336
         Me.C1SplitterPanel1.Location = New System.Drawing.Point(0, 0)
         Me.C1SplitterPanel1.Name = "C1SplitterPanel1"
         Me.C1SplitterPanel1.ShowCloseButton = True
-        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 367)
-        Me.C1SplitterPanel1.SizeRatio = 35.8R
+        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 325)
+        Me.C1SplitterPanel1.SizeRatio = 44.681R
         Me.C1SplitterPanel1.TabIndex = 0
         '
         'IdTextBox
@@ -415,26 +406,6 @@ Partial Class frmPrincipal
         Me.C1FlexGridSearchPanel1.Size = New System.Drawing.Size(232, 41)
         Me.C1FlexGridSearchPanel1.TabIndex = 50
         Me.C1FlexGridSearchPanel1.Watermark = "Entre texto a buscar..."
-        '
-        'C1FlexGrid1
-        '
-        Me.C1FlexGrid1.AllowDelete = True
-        Me.C1FlexGrid1.AllowFiltering = True
-        Me.C1FlexGridSearchPanel1.SetC1FlexGridSearchPanel(Me.C1FlexGrid1, Me.C1FlexGridSearchPanel1)
-        Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
-        Me.C1FlexGrid1.DataSource = Me.RegistroBindingSource
-        Me.C1FlexGrid1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexGrid1.Location = New System.Drawing.Point(65, 59)
-        Me.C1FlexGrid1.Name = "C1FlexGrid1"
-        Me.C1FlexGrid1.Rows.Count = 1
-        Me.C1FlexGrid1.Rows.DefaultSize = 16
-        Me.C1FlexGrid1.ShowCellLabels = True
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(691, 197)
-        Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
-        Me.C1FlexGrid1.TabIndex = 48
-        Me.C1FlexGrid1.Tree.Column = 0
-        Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
         '
         'C1CboMun
         '
@@ -975,7 +946,7 @@ Partial Class frmPrincipal
         Me.RegistroBindingNavigator.Name = "RegistroBindingNavigator"
         Me.RegistroBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
         Me.RegistroBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.RegistroBindingNavigator.Size = New System.Drawing.Size(764, 25)
+        Me.RegistroBindingNavigator.Size = New System.Drawing.Size(761, 25)
         Me.RegistroBindingNavigator.TabIndex = 0
         Me.RegistroBindingNavigator.Text = "BindingNavigator1"
         '
@@ -1143,172 +1114,61 @@ Partial Class frmPrincipal
         'C1SplitterPanel2
         '
         Me.C1SplitterPanel2.Collapsible = True
-        Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGridGroupPanel1)
         Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGrid1)
-        Me.C1SplitterPanel2.Controls.Add(Me.RegistroDataGridView)
-        Me.C1SplitterPanel2.Height = 426
-        Me.C1SplitterPanel2.Location = New System.Drawing.Point(0, 403)
+        Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGridGroupPanel1)
+        Me.C1SplitterPanel2.Height = 207
+        Me.C1SplitterPanel2.Location = New System.Drawing.Point(0, 361)
         Me.C1SplitterPanel2.Name = "C1SplitterPanel2"
         Me.C1SplitterPanel2.ShowCloseButton = True
-        Me.C1SplitterPanel2.Size = New System.Drawing.Size(764, 394)
-        Me.C1SplitterPanel2.SizeRatio = 63.095R
+        Me.C1SplitterPanel2.Size = New System.Drawing.Size(764, 175)
+        Me.C1SplitterPanel2.SizeRatio = 50.243R
         Me.C1SplitterPanel2.TabIndex = 1
         Me.C1SplitterPanel2.Text = "tabla"
         '
+        'C1FlexGrid1
+        '
+        Me.C1FlexGrid1.AllowDelete = True
+        Me.C1FlexGrid1.AllowFiltering = True
+        Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
+        Me.C1FlexGrid1.DataSource = Me.RegistroBindingSource
+        Me.C1FlexGrid1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.C1FlexGrid1.Location = New System.Drawing.Point(0, 44)
+        Me.C1FlexGrid1.Name = "C1FlexGrid1"
+        Me.C1FlexGrid1.Rows.Count = 1
+        Me.C1FlexGrid1.Rows.DefaultSize = 16
+        Me.C1FlexGrid1.ShowCellLabels = True
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 141)
+        Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
+        Me.C1FlexGrid1.TabIndex = 48
+        Me.C1FlexGrid1.Tree.Column = 0
+        Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
+        '
         'C1FlexGridGroupPanel1
         '
+        Me.C1FlexGridGroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.C1FlexGridGroupPanel1.FlexGrid = Me.C1FlexGrid1
-        Me.C1FlexGridGroupPanel1.Location = New System.Drawing.Point(113, 3)
+        Me.C1FlexGridGroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.C1FlexGridGroupPanel1.Name = "C1FlexGridGroupPanel1"
-        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(240, 40)
+        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(764, 175)
         Me.C1FlexGridGroupPanel1.TabIndex = 49
-        Me.C1FlexGridGroupPanel1.Text = "C1FlexGridGroupPanel1"
-        '
-        'RegistroDataGridView
-        '
-        Me.RegistroDataGridView.AllowUserToAddRows = False
-        Me.RegistroDataGridView.AutoGenerateColumns = False
-        Me.RegistroDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
-        Me.RegistroDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RegistroDataGridView.ColumnHeadersHeight = 20
-        Me.RegistroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.RegistroDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.FolioDataGridViewTextBoxColumn, Me.FechaDataGridViewTextBoxColumn, Me.DomicilioDataGridViewTextBoxColumn, Me.MunicipioDataGridViewTextBoxColumn, Me.TipoDeAvalúoDataGridViewTextBoxColumn, Me.Cliente, Me.SolicitadoPorDataGridViewTextBoxColumn, Me.NombreClienteDataGridViewTextBoxColumn, Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn, Me.Campo10DataGridViewTextBoxColumn, Me.StatusDelPagoDataGridViewTextBoxColumn, Me.Status_del_avalúo, Me.pagos})
-        Me.RegistroDataGridView.DataSource = Me.RegistroBindingSource
-        Me.RegistroDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.RegistroDataGridView.Name = "RegistroDataGridView"
-        Me.RegistroDataGridView.ReadOnly = True
-        Me.RegistroDataGridView.RowHeadersWidth = 20
-        Me.RegistroDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.RegistroDataGridView.RowTemplate.Height = 16
-        Me.RegistroDataGridView.Size = New System.Drawing.Size(65, 256)
-        Me.RegistroDataGridView.TabIndex = 47
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDataGridViewTextBoxColumn.Visible = False
-        Me.IdDataGridViewTextBoxColumn.Width = 41
-        '
-        'FolioDataGridViewTextBoxColumn
-        '
-        Me.FolioDataGridViewTextBoxColumn.DataPropertyName = "Folio"
-        Me.FolioDataGridViewTextBoxColumn.HeaderText = "Folio"
-        Me.FolioDataGridViewTextBoxColumn.Name = "FolioDataGridViewTextBoxColumn"
-        Me.FolioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FolioDataGridViewTextBoxColumn.Width = 54
-        '
-        'FechaDataGridViewTextBoxColumn
-        '
-        Me.FechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.HeaderText = "Fecha"
-        Me.FechaDataGridViewTextBoxColumn.Name = "FechaDataGridViewTextBoxColumn"
-        Me.FechaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaDataGridViewTextBoxColumn.Width = 62
-        '
-        'DomicilioDataGridViewTextBoxColumn
-        '
-        Me.DomicilioDataGridViewTextBoxColumn.DataPropertyName = "Domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.HeaderText = "Domicilio"
-        Me.DomicilioDataGridViewTextBoxColumn.Name = "DomicilioDataGridViewTextBoxColumn"
-        Me.DomicilioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DomicilioDataGridViewTextBoxColumn.Width = 74
-        '
-        'MunicipioDataGridViewTextBoxColumn
-        '
-        Me.MunicipioDataGridViewTextBoxColumn.DataPropertyName = "Municipio"
-        Me.MunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio"
-        Me.MunicipioDataGridViewTextBoxColumn.Name = "MunicipioDataGridViewTextBoxColumn"
-        Me.MunicipioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.MunicipioDataGridViewTextBoxColumn.Width = 77
-        '
-        'TipoDeAvalúoDataGridViewTextBoxColumn
-        '
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn.DataPropertyName = "tipo de avalúo"
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn.HeaderText = "tipo de avalúo"
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn.Name = "TipoDeAvalúoDataGridViewTextBoxColumn"
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TipoDeAvalúoDataGridViewTextBoxColumn.Width = 99
-        '
-        'Cliente
-        '
-        Me.Cliente.DataPropertyName = "Núm escr o de cliente"
-        Me.Cliente.HeaderText = "Núm escr o de cliente"
-        Me.Cliente.Name = "Cliente"
-        Me.Cliente.ReadOnly = True
-        Me.Cliente.Width = 135
-        '
-        'SolicitadoPorDataGridViewTextBoxColumn
-        '
-        Me.SolicitadoPorDataGridViewTextBoxColumn.DataPropertyName = "Solicitado por"
-        Me.SolicitadoPorDataGridViewTextBoxColumn.HeaderText = "Solicitado por"
-        Me.SolicitadoPorDataGridViewTextBoxColumn.Name = "SolicitadoPorDataGridViewTextBoxColumn"
-        Me.SolicitadoPorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.SolicitadoPorDataGridViewTextBoxColumn.Width = 96
-        '
-        'NombreClienteDataGridViewTextBoxColumn
-        '
-        Me.NombreClienteDataGridViewTextBoxColumn.DataPropertyName = "Nombre cliente"
-        Me.NombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre cliente"
-        Me.NombreClienteDataGridViewTextBoxColumn.Name = "NombreClienteDataGridViewTextBoxColumn"
-        Me.NombreClienteDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreClienteDataGridViewTextBoxColumn.Width = 103
-        '
-        'FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn
-        '
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn.DataPropertyName = "Fecha ingr a catastro o de auorización"
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn.HeaderText = "Fecha ingr a catastro o de auorización"
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn.Name = "FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn"
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn.Width = 213
-        '
-        'Campo10DataGridViewTextBoxColumn
-        '
-        Me.Campo10DataGridViewTextBoxColumn.DataPropertyName = "Campo10"
-        Me.Campo10DataGridViewTextBoxColumn.HeaderText = "Campo10"
-        Me.Campo10DataGridViewTextBoxColumn.Name = "Campo10DataGridViewTextBoxColumn"
-        Me.Campo10DataGridViewTextBoxColumn.ReadOnly = True
-        Me.Campo10DataGridViewTextBoxColumn.Visible = False
-        Me.Campo10DataGridViewTextBoxColumn.Width = 77
-        '
-        'StatusDelPagoDataGridViewTextBoxColumn
-        '
-        Me.StatusDelPagoDataGridViewTextBoxColumn.DataPropertyName = "Status del pago"
-        Me.StatusDelPagoDataGridViewTextBoxColumn.HeaderText = "Status del pago"
-        Me.StatusDelPagoDataGridViewTextBoxColumn.Name = "StatusDelPagoDataGridViewTextBoxColumn"
-        Me.StatusDelPagoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.StatusDelPagoDataGridViewTextBoxColumn.Width = 106
-        '
-        'Status_del_avalúo
-        '
-        Me.Status_del_avalúo.DataPropertyName = "Status del avalúo"
-        Me.Status_del_avalúo.HeaderText = "Status del avalúo"
-        Me.Status_del_avalúo.Name = "Status_del_avalúo"
-        Me.Status_del_avalúo.ReadOnly = True
-        Me.Status_del_avalúo.Width = 114
-        '
-        'pagos
-        '
-        Me.pagos.DataPropertyName = "pagos"
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.pagos.DefaultCellStyle = DataGridViewCellStyle1
-        Me.pagos.HeaderText = "pagos"
-        Me.pagos.Name = "pagos"
-        Me.pagos.ReadOnly = True
-        Me.pagos.Width = 61
+        Me.C1FlexGridGroupPanel1.Text = "Filtros"
         '
         'C1SplitterPanel3
         '
+        Me.C1SplitterPanel3.Controls.Add(Me.C1FlexPagos)
         Me.C1SplitterPanel3.Controls.Add(Me.ContactoDataGridView)
-        Me.C1SplitterPanel3.Height = 249
-        Me.C1SplitterPanel3.Location = New System.Drawing.Point(0, 833)
+        Me.C1SplitterPanel3.Height = 205
+        Me.C1SplitterPanel3.Location = New System.Drawing.Point(0, 572)
         Me.C1SplitterPanel3.Name = "C1SplitterPanel3"
-        Me.C1SplitterPanel3.Size = New System.Drawing.Size(764, 228)
+        Me.C1SplitterPanel3.Size = New System.Drawing.Size(764, 184)
         Me.C1SplitterPanel3.TabIndex = 2
         Me.C1SplitterPanel3.Text = "Panel 3"
+        '
+        'PagosBindingSource
+        '
+        Me.PagosBindingSource.DataMember = "Pagos"
+        Me.PagosBindingSource.DataSource = Me.ProDSet
         '
         'ContactoDataGridView
         '
@@ -1377,7 +1237,7 @@ Partial Class frmPrincipal
         Me.TableAdapterManager.ListadoTableAdapter = Nothing
         Me.TableAdapterManager.MunicipioTableAdapter = Nothing
         Me.TableAdapterManager.NotasTableAdapter = Me.NotasTableAdapter
-        Me.TableAdapterManager.PagosTableAdapter = Nothing
+        Me.TableAdapterManager.PagosTableAdapter = Me.PagosTableAdapter
         Me.TableAdapterManager.RegistroTableAdapter = Me.RegistroTableAdapter
         Me.TableAdapterManager.TelefonoTableAdapter = Nothing
         Me.TableAdapterManager.TipoAvaTableAdapter = Nothing
@@ -1414,12 +1274,37 @@ Partial Class frmPrincipal
         '
         Me.ContactoTableAdapter.ClearBeforeFill = True
         '
+        'PagosTableAdapter
+        '
+        Me.PagosTableAdapter.ClearBeforeFill = True
+        '
+        'RegistroPagosBindingSource
+        '
+        Me.RegistroPagosBindingSource.DataMember = "Registro_Pagos"
+        Me.RegistroPagosBindingSource.DataSource = Me.RegistroBindingSource
+        '
+        'C1FlexPagos
+        '
+        Me.C1FlexPagos.AllowAddNew = True
+        Me.C1FlexPagos.AllowDelete = True
+        Me.C1FlexPagos.ColumnInfo = resources.GetString("C1FlexPagos.ColumnInfo")
+        Me.C1FlexPagos.DataSource = Me.RegistroPagosBindingSource
+        Me.C1FlexPagos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(254, Byte))
+        Me.C1FlexPagos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.C1FlexPagos.Location = New System.Drawing.Point(341, 89)
+        Me.C1FlexPagos.Name = "C1FlexPagos"
+        Me.C1FlexPagos.Rows.Count = 1
+        Me.C1FlexPagos.Rows.DefaultSize = 16
+        Me.C1FlexPagos.Size = New System.Drawing.Size(393, 73)
+        Me.C1FlexPagos.StyleInfo = resources.GetString("C1FlexPagos.StyleInfo")
+        Me.C1FlexPagos.TabIndex = 2
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(764, 1061)
+        Me.ClientSize = New System.Drawing.Size(764, 756)
         Me.Controls.Add(Me.C1SplitContainer1)
         Me.Name = "frmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1430,7 +1315,6 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.PerformLayout()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CboTipo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1460,11 +1344,14 @@ Partial Class frmPrincipal
         CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitterPanel2.ResumeLayout(False)
-        CType(Me.RegistroDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitterPanel3.ResumeLayout(False)
+        CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1FlexPagos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1478,7 +1365,6 @@ Partial Class frmPrincipal
     Friend WithEvents Timer1 As Timer
     Friend WithEvents C1SplitterPanel1 As C1.Win.C1SplitContainer.C1SplitterPanel
     Friend WithEvents C1DateSol As C1.Win.Calendar.C1DateEdit
-    Friend WithEvents RegistroDataGridView As DataGridView
     Friend WithEvents RegistroBindingNavigator As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
@@ -1543,20 +1429,6 @@ Partial Class frmPrincipal
     Friend WithEvents C1CboMun As C1.Win.C1List.C1Combo
     Friend WithEvents MunicipioBindingSource As BindingSource
     Friend WithEvents MunicipioTableAdapter As ProDSetTableAdapters.MunicipioTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FolioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DomicilioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MunicipioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TipoDeAvalúoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Cliente As DataGridViewTextBoxColumn
-    Friend WithEvents SolicitadoPorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaIngrACatastroODeAuorizaciónDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Campo10DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents StatusDelPagoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Status_del_avalúo As DataGridViewTextBoxColumn
-    Friend WithEvents pagos As DataGridViewTextBoxColumn
     Friend WithEvents C1FlexGrid1 As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents C1FlexGridSearchPanel1 As C1.Win.C1FlexGrid.C1FlexGridSearchPanel
     Friend WithEvents C1FlexGridGroupPanel1 As C1.Win.C1FlexGrid.C1FlexGridGroupPanel
@@ -1569,4 +1441,8 @@ Partial Class frmPrincipal
     Friend WithEvents IdDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents IdRegistroDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ContactoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PagosBindingSource As BindingSource
+    Friend WithEvents PagosTableAdapter As ProDSetTableAdapters.PagosTableAdapter
+    Friend WithEvents RegistroPagosBindingSource As BindingSource
+    Friend WithEvents C1FlexPagos As C1.Win.C1FlexGrid.C1FlexGrid
 End Class

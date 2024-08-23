@@ -120,7 +120,6 @@ Partial Class frmSPago
         Me.C1Combo1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
         Me.C1Combo1.ColumnHeaders = False
         Me.C1Combo1.ColumnWidth = 100
-        Me.C1Combo1.ComboStyle = C1.Win.C1List.ComboStyleEnum.DropdownList
         Me.C1Combo1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContactoBindingSource, "Contacto", True))
         Me.C1Combo1.DataSource = Me.ContactoBindingSource
         Me.C1Combo1.DeadAreaBackColor = System.Drawing.Color.Empty

@@ -4,7 +4,7 @@ Imports Registro.ProDSetTableAdapters
 Public Class frmSPago
     Private Sub frmSPago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
+        'Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
         'Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
         'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
@@ -16,7 +16,7 @@ Public Class frmSPago
         'C1FlexGrid1.ContextMenu = ContextMenu
         'C1FlexGrid1.ContextMenuStrip = ContextMenuStrip
         If Me.IsHandleCreated AndAlso Me.Visible Then
-            'C1Combo1.ResetText()
+            C1Combo1.SelectedIndex = -1
             ' Ordenar los elementos en forma ascendente
             'Dim items As List(Of String) = New List(Of String)()
 

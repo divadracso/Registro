@@ -36,6 +36,9 @@ Partial Class frmSPago
         Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.C1FlexGrid2 = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.C1FlexReg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,12 +47,15 @@ Partial Class frmSPago
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'C1FlexReg
         '
         Me.C1FlexReg.AllowDelete = True
         Me.C1FlexReg.AllowFiltering = True
+        Me.C1FlexReg.AutoResize = True
         Me.C1FlexReg.ColumnInfo = resources.GetString("C1FlexReg.ColumnInfo")
         Me.C1FlexReg.DataSource = Me.RegistroBindingSource
         Me.C1FlexReg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
@@ -163,11 +169,42 @@ Partial Class frmSPago
         '
         Me.PagosTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(643, 176)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'C1FlexGrid2
+        '
+        Me.C1FlexGrid2.ColumnInfo = "10,1,0,0,0,-1,Columns:"
+        Me.C1FlexGrid2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.C1FlexGrid2.Location = New System.Drawing.Point(22, 437)
+        Me.C1FlexGrid2.Name = "C1FlexGrid2"
+        Me.C1FlexGrid2.Size = New System.Drawing.Size(791, 150)
+        Me.C1FlexGrid2.StyleInfo = resources.GetString("C1FlexGrid2.StyleInfo")
+        Me.C1FlexGrid2.TabIndex = 8
+        Me.C1FlexGrid2.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(113, 85)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(139, 79)
+        Me.DataGridView1.TabIndex = 9
+        '
         'frmSPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(825, 688)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.C1FlexGrid2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.C1FlexGrid1)
         Me.Controls.Add(Me.C1Combo1)
         Me.Controls.Add(Me.C1FlexReg)
@@ -183,6 +220,8 @@ Partial Class frmSPago
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -199,4 +238,7 @@ Partial Class frmSPago
     Friend WithEvents C1FlexGrid1 As C1.Win.C1FlexGrid.C1FlexGrid
     Friend WithEvents PagosBindingSource As BindingSource
     Friend WithEvents PagosTableAdapter As ProDSetTableAdapters.PagosTableAdapter
+    Friend WithEvents Button1 As Button
+    Friend WithEvents C1FlexGrid2 As C1.Win.C1FlexGrid.C1FlexGrid
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

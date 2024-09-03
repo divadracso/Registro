@@ -440,6 +440,38 @@ Public Class frmPrincipal
         frmSPago.Show()
     End Sub
 
+    Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        CentrarControl(GpoPrincipal)
+    End Sub
+
+
+    Private Sub CentrarControl(ctrl As Control)
+        ' Calcular la nueva posición del control para centrarlo
+        ctrl.Left = (Me.C1SplitterPanel1.Width - ctrl.Width) / 2
+        'ctrl.Top = (Me.ClientSize.Height - ctrl.Height) / 2
+    End Sub
+
+    Private Sub C1SplitContainer1_Click(sender As Object, e As EventArgs) Handles C1SplitContainer1.Click
+
+    End Sub
+    Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
+        ' Texto que deseas centrar
+        Dim titulo As String = "Mi Formulario Centrado"
+
+        ' Fuente y brocha para dibujar el texto
+        Dim fuente As New Font("Arial", 16, FontStyle.Bold)
+        Dim brocha As New SolidBrush(Color.Black)
+
+        ' Tamaño del texto
+        Dim tamañoTexto As SizeF = e.Graphics.MeasureString(titulo, fuente)
+
+        ' Calcular la posición para centrar el texto
+        Dim x As Single = (Me.ClientSize.Width - tamañoTexto.Width) / 2
+        Dim y As Single = (Me.ClientSize.Height - tamañoTexto.Height) / 2
+
+        ' Dibujar el texto centrado
+        e.Graphics.DrawString(titulo, fuente, brocha, x, y)
+    End Sub
 
 
 

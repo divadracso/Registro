@@ -43,7 +43,7 @@ Partial Class frmMain
         Me.IsMdiContainer = True
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmMain"
+        Me.Text = "Administración de avalúos"
         Me.ResumeLayout(False)
 
     End Sub

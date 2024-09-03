@@ -206,24 +206,24 @@ Public Class frmPrincipal
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ' Dim row As DataGridViewRow = Me.RegistroDataGridView.CurrentRow
-        If Labeltick.Visible = True Then
-            Labeltick.Visible = False
-            Labeltick.ForeColor = Color.FromArgb(30, 57, 91)
-            ' row.DefaultCellStyle.BackColor = Color.White
-            'Labeltick.ForeColor = SystemColors.WindowText
-        Else
-            Labeltick.Visible = True
-            Labeltick.ForeColor = Color.Red
-            'Labeltick.Visible = False
-            'row.DefaultCellStyle.BackColor = Color.Red
-        End If
-        'If row.Cells("StatusA").Value IsNot Nothing AndAlso row.Cells("StatusA").Value.ToString() = "cerrado" Then
-        '    row.DefaultCellStyle.BackColor = Color.White
-
+        '' Dim row As DataGridViewRow = Me.RegistroDataGridView.CurrentRow
+        'If Labeltick.Visible = True Then
+        '    Labeltick.Visible = False
+        '    Labeltick.ForeColor = Color.FromArgb(30, 57, 91)
+        '    ' row.DefaultCellStyle.BackColor = Color.White
+        '    'Labeltick.ForeColor = SystemColors.WindowText
         'Else
-        '    row.DefaultCellStyle.BackColor = Color.Red
+        '    Labeltick.Visible = True
+        '    Labeltick.ForeColor = Color.Red
+        '    'Labeltick.Visible = False
+        '    'row.DefaultCellStyle.BackColor = Color.Red
         'End If
+        ''If row.Cells("StatusA").Value IsNot Nothing AndAlso row.Cells("StatusA").Value.ToString() = "cerrado" Then
+        ''    row.DefaultCellStyle.BackColor = Color.White
+
+        ''Else
+        ''    row.DefaultCellStyle.BackColor = Color.Red
+        ''End If
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -234,9 +234,9 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Timer1.Stop()
-        Labeltick.Visible = True
-        Labeltick.ForeColor = Color.FromArgb(30, 57, 91)
+        'Timer1.Stop()
+        'Labeltick.Visible = True
+        'Labeltick.ForeColor = Color.FromArgb(30, 57, 91)
     End Sub
 
     Private Sub RegistroDataGridView_RowEnter(sender As Object, e As DataGridViewCellEventArgs) 'Handles RegistroDataGridView.RowEnter, RegistroDataGridView.CellEnter
@@ -435,8 +435,12 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        frmSPago.MdiParent = Me.ParentForm
+        frmSPago.WindowState = FormWindowState.Maximized
         frmSPago.Show()
     End Sub
+
+
 
 
 

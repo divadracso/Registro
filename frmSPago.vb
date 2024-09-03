@@ -4,20 +4,14 @@ Imports Registro.ProDSetTableAdapters
 
 Public Class frmSPago
     Private Sub frmSPago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        'Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Pagos' Puede moverla o quitarla según sea necesario.
-        'Me.PagosTableAdapter.Fill(Me.ProDSet.Pagos)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Contacto' Puede moverla o quitarla según sea necesario.
+
         Me.ContactoTableAdapter.Fill(Me.ProDSet.Contacto)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Notas' Puede moverla o quitarla según sea necesario.
-        'Me.NotasTableAdapter.Fill(Me.ProDSet.Notas)
-        'TODO: esta línea de código carga datos en la tabla 'ProDSet.Registro' Puede moverla o quitarla según sea necesario.
-        'Me.RegistroTableAdapter.Fill(Me.ProDSet.Registro)
-        'C1FlexGrid1.ContextMenu = ContextMenu
-        'C1FlexGrid1.ContextMenuStrip = ContextMenuStrip
+        'C1Combo1.SelectedIndex = -1
+
         If Me.IsHandleCreated AndAlso Me.Visible Then
-            C1Combo1.SelectedIndex = -1
+            'C1Combo1.SelectedIndex = -1
+
+            'C1Combo1.se ' = -1
             ' Ordenar los elementos en forma ascendente
             'Dim items As List(Of String) = New List(Of String)()
 
@@ -36,7 +30,10 @@ Public Class frmSPago
             '    Next
             'C1Combo1_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles C1Combo1.SelectionChangeCommitted
             AddHandler C1Combo1.SelectionChangeCommitted, AddressOf C1Combo1_SelectionChangeCommitted
+            ' C1Combo1.SelectedIndex = -1
         End If
+        ' C1Combo1.SelectedIndex = -1
+        'Me.ContactoTableAdapter.Fill(Me.ProDSet.Contacto)
 
     End Sub
 
@@ -146,18 +143,41 @@ Public Class frmSPago
 
     Private Sub C1Combo1_SelectionChangeCommitted(sender As Object, e As EventArgs) 'Handles C1Combo1.SelectionChangeCommitted
         Dim dt As New DataTable
-
+        C1FlexGrid1.DataSource = PagosBindingSource
         'bs.DataSource = Me.PagosTableAdapter.FillByContacto(ProDSet.Pagos, CInt(C1Combo1.SelectedValue.ToString))
         dt = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
+        PagosBindingSource.DataSource = dt
+        ' PagosBindingSource.DataMember = ProDSet.Pagos.ToString
+        'DataGridView1.DataSource = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
+        ' Me.PagosTableAdapter.FillByContacto(ProDSet.Pagos, CInt(C1Combo1.SelectedValue.ToString))
+        Me.PagosTableAdapter.FillByContacto(dt, CInt(C1Combo1.SelectedValue.ToString))
 
-        DataGridView1.DataSource = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
-        Me.PagosTableAdapter.FillByContacto(ProDSet.Pagos, CInt(C1Combo1.SelectedValue.ToString))
         Me.RegistroTableAdapter.FillByContacto(ProDSet.Registro, CInt(C1Combo1.SelectedValue.ToString))
         ' Me.C1FlexReg.Aggregate(sum)
         'C1FlexReg.DataSource = RegistroBindingSource
         For Each col As System.Data.DataColumn In dt.Columns
+            If col.ColumnName = "Id" Or col.ColumnName = "idCont" Or col.ColumnName = "idAva" Then
+                C1FlexGrid1.Cols.Item(col.ColumnName).Visible = False
+                'C1FlexGrid1.Cols.Item("Domicilio").Move(1)
+            End If
+
+            C1FlexGrid1.Cols.Item("Domicilio").Move(1)
+            C1FlexGrid1.Cols.Item("Municipio").Move(2)
+            C1FlexGrid1.Cols.Item("Cant").Caption = "C. Pagada" 'Move(2)
+            C1FlexGrid1.Cols.Item("Cant").Format = "c2"
+            C1FlexGrid1.Cols.Item("Fecha").TextAlign = C1.Win.C1FlexGrid.TextAlignEnum.RightCenter
+            C1FlexGrid1.Cols.Item("Status del Pago").TextAlign = C1.Win.C1FlexGrid.TextAlignEnum.RightCenter
+            C1FlexGrid1.Cols.Item("Fecha").Caption = "Fecha de Pago"
+            C1FlexGrid1.AutoResize = True
+            ' C1FlexGrid1.
+            'C1FlexGrid1.Cols.Item("Domicilio").Move(1)
             Console.WriteLine(col.ColumnName)
         Next
+        For Each col As C1.Win.C1FlexGrid.Column In C1FlexGrid1.Cols
+            col.TextAlignFixed = C1.Win.C1FlexGrid.TextAlignEnum.CenterCenter
+
+        Next
+
         ' Asumiendo que tienes un C1FlexGrid llamado flexGrid
         '    C1FlexReg.DataSource = RegistroBindingSource '.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString)) ' Tu fuente de datos
 
@@ -253,7 +273,8 @@ Public Class frmSPago
 
         '' Me.RegistroTableAdapter.ScalarQuery(ProDSet.Registro, CInt(C1Combo1.SelectedValue.ToString))
         '' C1FlexReg.DataSource = RegistroBindingSo
-        C1FlexReg.AutoResize = True
+        C1FlexReg.AutoSizeCols() ' = True
+        C1FlexGrid1.AutoSizeCols() ' = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -279,4 +300,6 @@ Public Class frmSPago
         Next
 
     End Sub
+
+
 End Class

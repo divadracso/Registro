@@ -302,7 +302,9 @@ Module mdFunciones
                 Console.WriteLine("ID: " & row("id"))
                 Exit For
             End If
+
         Next
+        Return 0
     End Function
     Public Sub actualizaPagos(dtbuscar As DataTable, idAva As Integer, newValor As Integer)
         For Each row As DataRow In dtbuscar.Rows

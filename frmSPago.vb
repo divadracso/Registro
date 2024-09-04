@@ -142,10 +142,11 @@ Public Class frmSPago
     End Sub
 
     Private Sub C1Combo1_SelectionChangeCommitted(sender As Object, e As EventArgs) 'Handles C1Combo1.SelectionChangeCommitted
-        Dim dt As New DataTable
-        C1FlexGrid1.DataSource = PagosBindingSource
+        'Dim dt As New DataTable
+        'dt = ProDSet.Pagos
+        'C1FlexGrid1.DataSource = PagosBindingSource
         'bs.DataSource = Me.PagosTableAdapter.FillByContacto(ProDSet.Pagos, CInt(C1Combo1.SelectedValue.ToString))
-        dt = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
+        Dim dt = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
         PagosBindingSource.DataSource = dt
         ' PagosBindingSource.DataMember = ProDSet.Pagos.ToString
         'DataGridView1.DataSource = Me.PagosTableAdapter.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString))
@@ -235,6 +236,7 @@ Public Class frmSPago
         For i As Integer = 1 To C1FlexReg.Rows.Count - 1 ' Empieza en 1 para omitir la fila de encabezado
             suma += Convert.ToDouble(C1FlexReg(i, "Cant"))
         Next
+        C1FlexReg.Cols.Item("id").Visible = False
         Dim fuenteActual As Font = C1FlexGrid1.Font
         ' Añadir un nuevo registro al final del FlexGrid para mostrar la suma
         Dim nuevaFila As Integer = C1FlexReg.Rows.Count
@@ -275,6 +277,8 @@ Public Class frmSPago
         '' C1FlexReg.DataSource = RegistroBindingSo
         C1FlexReg.AutoSizeCols() ' = True
         C1FlexGrid1.AutoSizeCols() ' = True
+        C1FlexReg.AutoSizeRows()
+        C1FlexGrid1.AutoSizeRows()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -299,7 +303,10 @@ Public Class frmSPago
             C1FlexGrid2.SetCellStyle(fila, "Total2", cellStyle)
         Next
 
-    End Sub
+        C1FlexGrid2.AutoSizeCols() ' = True
+        C1FlexGrid2.AutoSizeRows()
+        C1FlexGrid2.Cols.Item("id").Visible = False
 
+    End Sub
 
 End Class

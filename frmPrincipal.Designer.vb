@@ -40,12 +40,29 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.GpoPrincipal = New System.Windows.Forms.GroupBox()
+        Me.C1txtCosto = New C1.Win.C1Input.C1TextBox()
+        Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProDSet = New Registro.ProDSet()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.C1CboMun = New C1.Win.C1List.C1Combo()
+        Me.MunicipioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1CboTipo = New C1.Win.C1List.C1Combo()
+        Me.TipoAvaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1CboCli = New C1.Win.C1List.C1Combo()
+        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1CboSol = New C1.Win.C1List.C1Combo()
+        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.C1TextBox9 = New C1.Win.C1Input.C1TextBox()
+        Me.C1TextBox8 = New C1.Win.C1Input.C1TextBox()
+        Me.C1TextBox7 = New C1.Win.C1Input.C1TextBox()
+        Me.C1TextBox5 = New C1.Win.C1Input.C1TextBox()
+        Me.C1TextBox2 = New C1.Win.C1Input.C1TextBox()
+        Me.C1TextBox1 = New C1.Win.C1Input.C1TextBox()
+        Me.C1DateSol = New C1.Win.Calendar.C1DateEdit()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnComentar = New C1.Win.C1Input.C1Button()
         Me.C1txtNotas = New C1.Win.C1Input.C1TextBox()
         Me.NotasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProDSet = New Registro.ProDSet()
         Me.C1FlexGridSearchPanel1 = New C1.Win.C1FlexGrid.C1FlexGridSearchPanel()
         Me.RegistroBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -64,13 +81,6 @@ Partial Class frmPrincipal
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.C1CboMun = New C1.Win.C1List.C1Combo()
-        Me.MunicipioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.C1CboTipo = New C1.Win.C1List.C1Combo()
-        Me.TipoAvaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.C1CboCli = New C1.Win.C1List.C1Combo()
-        Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GpoStatus = New System.Windows.Forms.GroupBox()
         Me.rbtnCancel = New System.Windows.Forms.RadioButton()
         Me.rbtnProceso = New System.Windows.Forms.RadioButton()
@@ -80,16 +90,6 @@ Partial Class frmPrincipal
         Me.rbtnCorre = New System.Windows.Forms.RadioButton()
         Me.rbtnListoEn = New System.Windows.Forms.RadioButton()
         Me.rbtnEnCe = New System.Windows.Forms.RadioButton()
-        Me.C1CboSol = New C1.Win.C1List.C1Combo()
-        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.C1TextBox9 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox8 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox7 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox5 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox2 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox1 = New C1.Win.C1Input.C1TextBox()
-        Me.C1Button1 = New C1.Win.C1Input.C1Button()
-        Me.C1DateSol = New C1.Win.Calendar.C1DateEdit()
         Me.txtPagos = New System.Windows.Forms.TextBox()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem1 = New System.Windows.Forms.ToolStripButton()
@@ -143,21 +143,15 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
         Me.GpoPrincipal.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1txtCosto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RegistroBindingNavigator.SuspendLayout()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CboTipo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoAvaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CboCli, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GpoStatus.SuspendLayout()
         CType(Me.C1CboSol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,8 +160,14 @@ Partial Class frmPrincipal
         CType(Me.C1TextBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1DateSol, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RegistroBindingNavigator.SuspendLayout()
+        Me.GpoStatus.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.C1SplitterPanel2.SuspendLayout()
@@ -327,17 +327,18 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.Collapsible = True
         Me.C1SplitterPanel1.Controls.Add(Me.GpoPrincipal)
         Me.C1SplitterPanel1.Controls.Add(Me.BindingNavigator1)
-        Me.C1SplitterPanel1.Height = 281
+        Me.C1SplitterPanel1.Height = 322
         Me.C1SplitterPanel1.Location = New System.Drawing.Point(0, 0)
         Me.C1SplitterPanel1.Name = "C1SplitterPanel1"
         Me.C1SplitterPanel1.ResizeWhileDragging = True
         Me.C1SplitterPanel1.ShowCloseButton = True
-        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 270)
-        Me.C1SplitterPanel1.SizeRatio = 53.831R
+        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 311)
+        Me.C1SplitterPanel1.SizeRatio = 61.686R
         Me.C1SplitterPanel1.TabIndex = 0
         '
         'GpoPrincipal
         '
+        Me.GpoPrincipal.Controls.Add(Me.C1txtCosto)
         Me.GpoPrincipal.Controls.Add(Me.Button1)
         Me.GpoPrincipal.Controls.Add(Me.C1CboMun)
         Me.GpoPrincipal.Controls.Add(Me.C1CboTipo)
@@ -357,7 +358,6 @@ Partial Class frmPrincipal
         Me.GpoPrincipal.Controls.Add(Me.RegistroBindingNavigator)
         Me.GpoPrincipal.Controls.Add(Me.IdTextBox)
         Me.GpoPrincipal.Controls.Add(Me.GpoStatus)
-        Me.GpoPrincipal.Controls.Add(Me.C1Button1)
         Me.GpoPrincipal.Controls.Add(Me.txtPagos)
         Me.GpoPrincipal.Controls.Add(Status_del_pagoLabel)
         Me.GpoPrincipal.Controls.Add(Campo10Label)
@@ -374,6 +374,306 @@ Partial Class frmPrincipal
         Me.GpoPrincipal.Size = New System.Drawing.Size(758, 253)
         Me.GpoPrincipal.TabIndex = 63
         Me.GpoPrincipal.TabStop = False
+        '
+        'C1txtCosto
+        '
+        Me.C1txtCosto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1txtCosto.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Costo", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
+        Me.C1txtCosto.DataType = GetType(Decimal)
+        Me.C1txtCosto.DisplayFormat.FormatType = C1.Win.C1Input.FormatTypeEnum.Currency
+        Me.C1txtCosto.DisplayFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.CustomFormat Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
+        Me.C1txtCosto.EditFormat.FormatType = C1.Win.C1Input.FormatTypeEnum.Currency
+        Me.C1txtCosto.EditFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.CustomFormat Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
+        Me.C1txtCosto.Location = New System.Drawing.Point(654, 230)
+        Me.C1txtCosto.Name = "C1txtCosto"
+        Me.C1txtCosto.Size = New System.Drawing.Size(107, 18)
+        Me.C1txtCosto.TabIndex = 101
+        Me.C1txtCosto.Tag = Nothing
+        Me.C1txtCosto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.C1txtCosto.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1txtCosto.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'RegistroBindingSource
+        '
+        Me.RegistroBindingSource.DataMember = "Registro"
+        Me.RegistroBindingSource.DataSource = Me.ProDSet
+        '
+        'ProDSet
+        '
+        Me.ProDSet.DataSetName = "ProDSet"
+        Me.ProDSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(275, 36)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 98
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'C1CboMun
+        '
+        Me.C1CboMun.AllowColSelect = True
+        Me.C1CboMun.AutoSize = False
+        Me.C1CboMun.Caption = ""
+        Me.C1CboMun.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.C1CboMun.ColumnHeaders = False
+        Me.C1CboMun.ColumnWidth = 100
+        Me.C1CboMun.ContentHeight = 11
+        Me.C1CboMun.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Municipio", True))
+        Me.C1CboMun.DataSource = Me.MunicipioBindingSource
+        Me.C1CboMun.DeadAreaBackColor = System.Drawing.Color.Empty
+        Me.C1CboMun.DisplayMember = "Municipio"
+        Me.C1CboMun.EditorBackColor = System.Drawing.SystemColors.Window
+        Me.C1CboMun.ExtendRightColumn = True
+        Me.C1CboMun.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
+        Me.C1CboMun.Images.Add(CType(resources.GetObject("C1CboMun.Images"), System.Drawing.Image))
+        Me.C1CboMun.ItemHeight = 13
+        Me.C1CboMun.Location = New System.Drawing.Point(161, 93)
+        Me.C1CboMun.MatchEntryTimeout = CType(2000, Long)
+        Me.C1CboMun.MaxDropDownItems = CType(5, Short)
+        Me.C1CboMun.MaxLength = 32767
+        Me.C1CboMun.MouseCursor = System.Windows.Forms.Cursors.Default
+        Me.C1CboMun.Name = "C1CboMun"
+        Me.C1CboMun.RowSubDividerColor = System.Drawing.Color.DarkGray
+        Me.C1CboMun.Size = New System.Drawing.Size(200, 17)
+        Me.C1CboMun.TabIndex = 97
+        Me.C1CboMun.Tag = "Municipio"
+        Me.C1CboMun.ValueMember = "Municipio"
+        Me.C1CboMun.VisualStyle = C1.Win.C1List.VisualStyle.Office2010Blue
+        Me.C1CboMun.PropBag = resources.GetString("C1CboMun.PropBag")
+        '
+        'MunicipioBindingSource
+        '
+        Me.MunicipioBindingSource.DataMember = "Municipio"
+        Me.MunicipioBindingSource.DataSource = Me.ProDSet
+        '
+        'C1CboTipo
+        '
+        Me.C1CboTipo.AllowColSelect = True
+        Me.C1CboTipo.AutoSize = False
+        Me.C1CboTipo.Caption = ""
+        Me.C1CboTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.C1CboTipo.ColumnHeaders = False
+        Me.C1CboTipo.ColumnWidth = 100
+        Me.C1CboTipo.ContentHeight = 11
+        Me.C1CboTipo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "tipo de avalúo", True))
+        Me.C1CboTipo.DataSource = Me.TipoAvaBindingSource
+        Me.C1CboTipo.DeadAreaBackColor = System.Drawing.Color.Empty
+        Me.C1CboTipo.DisplayMember = "TipoAva"
+        Me.C1CboTipo.EditorBackColor = System.Drawing.SystemColors.Window
+        Me.C1CboTipo.ExtendRightColumn = True
+        Me.C1CboTipo.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
+        Me.C1CboTipo.Images.Add(CType(resources.GetObject("C1CboTipo.Images"), System.Drawing.Image))
+        Me.C1CboTipo.ItemHeight = 13
+        Me.C1CboTipo.Location = New System.Drawing.Point(161, 113)
+        Me.C1CboTipo.MatchEntryTimeout = CType(2000, Long)
+        Me.C1CboTipo.MaxDropDownItems = CType(5, Short)
+        Me.C1CboTipo.MaxLength = 32767
+        Me.C1CboTipo.MouseCursor = System.Windows.Forms.Cursors.Default
+        Me.C1CboTipo.Name = "C1CboTipo"
+        Me.C1CboTipo.RowSubDividerColor = System.Drawing.Color.DarkGray
+        Me.C1CboTipo.Size = New System.Drawing.Size(200, 17)
+        Me.C1CboTipo.TabIndex = 96
+        Me.C1CboTipo.Tag = "TipoAva"
+        Me.C1CboTipo.ValueMember = "TipoAva"
+        Me.C1CboTipo.PropBag = resources.GetString("C1CboTipo.PropBag")
+        '
+        'TipoAvaBindingSource
+        '
+        Me.TipoAvaBindingSource.DataMember = "TipoAva"
+        Me.TipoAvaBindingSource.DataSource = Me.ProDSet
+        '
+        'C1CboCli
+        '
+        Me.C1CboCli.AllowColSelect = True
+        Me.C1CboCli.AutoSize = False
+        Me.C1CboCli.Caption = ""
+        Me.C1CboCli.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.C1CboCli.ColumnHeaders = False
+        Me.C1CboCli.ColumnWidth = 100
+        Me.C1CboCli.ContentHeight = 11
+        Me.C1CboCli.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Nombre cliente", True))
+        Me.C1CboCli.DataSource = Me.ClienteBindingSource
+        Me.C1CboCli.DeadAreaBackColor = System.Drawing.Color.Empty
+        Me.C1CboCli.DisplayMember = "Cliente"
+        Me.C1CboCli.EditorBackColor = System.Drawing.SystemColors.Window
+        Me.C1CboCli.ExtendRightColumn = True
+        Me.C1CboCli.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
+        Me.C1CboCli.Images.Add(CType(resources.GetObject("C1CboCli.Images"), System.Drawing.Image))
+        Me.C1CboCli.ItemHeight = 13
+        Me.C1CboCli.Location = New System.Drawing.Point(161, 171)
+        Me.C1CboCli.MatchEntryTimeout = CType(2000, Long)
+        Me.C1CboCli.MaxDropDownItems = CType(5, Short)
+        Me.C1CboCli.MaxLength = 32767
+        Me.C1CboCli.MouseCursor = System.Windows.Forms.Cursors.Default
+        Me.C1CboCli.Name = "C1CboCli"
+        Me.C1CboCli.RowSubDividerColor = System.Drawing.Color.DarkGray
+        Me.C1CboCli.Size = New System.Drawing.Size(200, 17)
+        Me.C1CboCli.TabIndex = 95
+        Me.C1CboCli.Tag = "Cliente"
+        Me.C1CboCli.ValueMember = "Cliente"
+        Me.C1CboCli.PropBag = resources.GetString("C1CboCli.PropBag")
+        '
+        'ClienteBindingSource
+        '
+        Me.ClienteBindingSource.DataMember = "Cliente"
+        Me.ClienteBindingSource.DataSource = Me.ProDSet
+        '
+        'C1CboSol
+        '
+        Me.C1CboSol.AllowColSelect = True
+        Me.C1CboSol.AutoCompletion = True
+        Me.C1CboSol.AutoDropDown = True
+        Me.C1CboSol.AutoSelect = True
+        Me.C1CboSol.AutoSize = False
+        Me.C1CboSol.Caption = ""
+        Me.C1CboSol.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.C1CboSol.ColumnHeaders = False
+        Me.C1CboSol.ColumnWidth = 100
+        Me.C1CboSol.ContentHeight = 11
+        Me.C1CboSol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Solicitado por", True))
+        Me.C1CboSol.DataSource = Me.ContactoBindingSource
+        Me.C1CboSol.DeadAreaBackColor = System.Drawing.Color.Empty
+        Me.C1CboSol.DisplayMember = "Contacto"
+        Me.C1CboSol.EditorBackColor = System.Drawing.SystemColors.Window
+        Me.C1CboSol.ExtendRightColumn = True
+        Me.C1CboSol.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
+        Me.C1CboSol.Images.Add(CType(resources.GetObject("C1CboSol.Images"), System.Drawing.Image))
+        Me.C1CboSol.ItemHeight = 13
+        Me.C1CboSol.Location = New System.Drawing.Point(161, 152)
+        Me.C1CboSol.MatchEntryTimeout = CType(2000, Long)
+        Me.C1CboSol.MaxDropDownItems = CType(5, Short)
+        Me.C1CboSol.MaxLength = 32767
+        Me.C1CboSol.MouseCursor = System.Windows.Forms.Cursors.Default
+        Me.C1CboSol.Name = "C1CboSol"
+        Me.C1CboSol.RowSubDividerColor = System.Drawing.Color.DarkGray
+        Me.C1CboSol.Size = New System.Drawing.Size(200, 17)
+        Me.C1CboSol.TabIndex = 92
+        Me.C1CboSol.Tag = "Contacto"
+        Me.C1CboSol.ValueMember = "Contacto"
+        Me.C1CboSol.PropBag = resources.GetString("C1CboSol.PropBag")
+        '
+        'ContactoBindingSource
+        '
+        Me.ContactoBindingSource.DataMember = "Contacto"
+        Me.ContactoBindingSource.DataSource = Me.ProDSet
+        '
+        'C1TextBox9
+        '
+        Me.C1TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Status del pago", True))
+        Me.C1TextBox9.Location = New System.Drawing.Point(161, 230)
+        Me.C1TextBox9.Name = "C1TextBox9"
+        Me.C1TextBox9.Size = New System.Drawing.Size(200, 18)
+        Me.C1TextBox9.TabIndex = 83
+        Me.C1TextBox9.Tag = Nothing
+        Me.C1TextBox9.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox9.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1TextBox8
+        '
+        Me.C1TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Campo10", True))
+        Me.C1TextBox8.Location = New System.Drawing.Point(161, 210)
+        Me.C1TextBox8.Name = "C1TextBox8"
+        Me.C1TextBox8.Size = New System.Drawing.Size(200, 18)
+        Me.C1TextBox8.TabIndex = 81
+        Me.C1TextBox8.Tag = Nothing
+        Me.C1TextBox8.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox8.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1TextBox7
+        '
+        Me.C1TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Fecha ingr a catastro o de auorización", True))
+        Me.C1TextBox7.Location = New System.Drawing.Point(161, 190)
+        Me.C1TextBox7.Name = "C1TextBox7"
+        Me.C1TextBox7.Size = New System.Drawing.Size(200, 18)
+        Me.C1TextBox7.TabIndex = 80
+        Me.C1TextBox7.Tag = Nothing
+        Me.C1TextBox7.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox7.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1TextBox5
+        '
+        Me.C1TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Núm escr o de cliente", True))
+        Me.C1TextBox5.DataType = GetType(Double)
+        Me.C1TextBox5.Location = New System.Drawing.Point(161, 132)
+        Me.C1TextBox5.Name = "C1TextBox5"
+        Me.C1TextBox5.Size = New System.Drawing.Size(200, 18)
+        Me.C1TextBox5.TabIndex = 77
+        Me.C1TextBox5.Tag = Nothing
+        Me.C1TextBox5.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox5.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1TextBox2
+        '
+        Me.C1TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Domicilio", True))
+        Me.C1TextBox2.Location = New System.Drawing.Point(161, 73)
+        Me.C1TextBox2.Name = "C1TextBox2"
+        Me.C1TextBox2.Size = New System.Drawing.Size(190, 18)
+        Me.C1TextBox2.TabIndex = 75
+        Me.C1TextBox2.Tag = Nothing
+        Me.C1TextBox2.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox2.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1TextBox1
+        '
+        Me.C1TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Folio", True))
+        Me.C1TextBox1.DataType = GetType(Double)
+        Me.C1TextBox1.DisplayFormat.CustomFormat = "000"
+        Me.C1TextBox1.DisplayFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.FormatType Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
+        Me.C1TextBox1.EditFormat.CustomFormat = "000"
+        Me.C1TextBox1.EditFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.FormatType Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
+            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
+        Me.C1TextBox1.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
+        Me.C1TextBox1.Location = New System.Drawing.Point(161, 33)
+        Me.C1TextBox1.Name = "C1TextBox1"
+        Me.C1TextBox1.Size = New System.Drawing.Size(77, 18)
+        Me.C1TextBox1.TabIndex = 72
+        Me.C1TextBox1.Tag = Nothing
+        Me.C1TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.C1TextBox1.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1TextBox1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'C1DateSol
+        '
+        Me.C1DateSol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.C1DateSol.Calendar.RightToLeft = System.Windows.Forms.RightToLeft.Inherit
+        Me.C1DateSol.Calendar.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1DateSol.Calendar.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1DateSol.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Fecha", True))
+        Me.C1DateSol.FormatType = C1.Win.C1Input.FormatTypeEnum.ShortDate
+        Me.C1DateSol.GapHeight = 0
+        Me.C1DateSol.ImagePadding = New System.Windows.Forms.Padding(0)
+        Me.C1DateSol.Location = New System.Drawing.Point(161, 53)
+        Me.C1DateSol.Name = "C1DateSol"
+        Me.C1DateSol.Size = New System.Drawing.Size(99, 18)
+        Me.C1DateSol.TabIndex = 73
+        Me.C1DateSol.Tag = Nothing
+        Me.C1DateSol.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.DropDown
+        Me.C1DateSol.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1DateSol.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
         'Panel1
         '
@@ -421,16 +721,6 @@ Partial Class frmPrincipal
         '
         Me.NotasBindingSource.DataMember = "Registro_Notas"
         Me.NotasBindingSource.DataSource = Me.RegistroBindingSource
-        '
-        'RegistroBindingSource
-        '
-        Me.RegistroBindingSource.DataMember = "Registro"
-        Me.RegistroBindingSource.DataSource = Me.ProDSet
-        '
-        'ProDSet
-        '
-        Me.ProDSet.DataSetName = "ProDSet"
-        Me.ProDSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'C1FlexGridSearchPanel1
         '
@@ -584,118 +874,6 @@ Partial Class frmPrincipal
         Me.IdTextBox.Size = New System.Drawing.Size(58, 20)
         Me.IdTextBox.TabIndex = 100
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(275, 36)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 98
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'C1CboMun
-        '
-        Me.C1CboMun.AllowColSelect = True
-        Me.C1CboMun.AutoSize = False
-        Me.C1CboMun.Caption = ""
-        Me.C1CboMun.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.C1CboMun.ColumnHeaders = False
-        Me.C1CboMun.ColumnWidth = 100
-        Me.C1CboMun.ContentHeight = 11
-        Me.C1CboMun.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Municipio", True))
-        Me.C1CboMun.DataSource = Me.MunicipioBindingSource
-        Me.C1CboMun.DeadAreaBackColor = System.Drawing.Color.Empty
-        Me.C1CboMun.DisplayMember = "Municipio"
-        Me.C1CboMun.EditorBackColor = System.Drawing.SystemColors.Window
-        Me.C1CboMun.ExtendRightColumn = True
-        Me.C1CboMun.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
-        Me.C1CboMun.Images.Add(CType(resources.GetObject("C1CboMun.Images"), System.Drawing.Image))
-        Me.C1CboMun.ItemHeight = 13
-        Me.C1CboMun.Location = New System.Drawing.Point(161, 93)
-        Me.C1CboMun.MatchEntryTimeout = CType(2000, Long)
-        Me.C1CboMun.MaxDropDownItems = CType(5, Short)
-        Me.C1CboMun.MaxLength = 32767
-        Me.C1CboMun.MouseCursor = System.Windows.Forms.Cursors.Default
-        Me.C1CboMun.Name = "C1CboMun"
-        Me.C1CboMun.RowSubDividerColor = System.Drawing.Color.DarkGray
-        Me.C1CboMun.Size = New System.Drawing.Size(200, 17)
-        Me.C1CboMun.TabIndex = 97
-        Me.C1CboMun.VisualStyle = C1.Win.C1List.VisualStyle.Office2010Blue
-        Me.C1CboMun.PropBag = resources.GetString("C1CboMun.PropBag")
-        '
-        'MunicipioBindingSource
-        '
-        Me.MunicipioBindingSource.DataMember = "Municipio"
-        Me.MunicipioBindingSource.DataSource = Me.ProDSet
-        '
-        'C1CboTipo
-        '
-        Me.C1CboTipo.AllowColSelect = True
-        Me.C1CboTipo.AutoSize = False
-        Me.C1CboTipo.Caption = ""
-        Me.C1CboTipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.C1CboTipo.ColumnHeaders = False
-        Me.C1CboTipo.ColumnWidth = 100
-        Me.C1CboTipo.ContentHeight = 11
-        Me.C1CboTipo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "tipo de avalúo", True))
-        Me.C1CboTipo.DataSource = Me.TipoAvaBindingSource
-        Me.C1CboTipo.DeadAreaBackColor = System.Drawing.Color.Empty
-        Me.C1CboTipo.DisplayMember = "TipoAva"
-        Me.C1CboTipo.EditorBackColor = System.Drawing.SystemColors.Window
-        Me.C1CboTipo.ExtendRightColumn = True
-        Me.C1CboTipo.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
-        Me.C1CboTipo.Images.Add(CType(resources.GetObject("C1CboTipo.Images"), System.Drawing.Image))
-        Me.C1CboTipo.ItemHeight = 13
-        Me.C1CboTipo.Location = New System.Drawing.Point(161, 113)
-        Me.C1CboTipo.MatchEntryTimeout = CType(2000, Long)
-        Me.C1CboTipo.MaxDropDownItems = CType(5, Short)
-        Me.C1CboTipo.MaxLength = 32767
-        Me.C1CboTipo.MouseCursor = System.Windows.Forms.Cursors.Default
-        Me.C1CboTipo.Name = "C1CboTipo"
-        Me.C1CboTipo.RowSubDividerColor = System.Drawing.Color.DarkGray
-        Me.C1CboTipo.Size = New System.Drawing.Size(200, 17)
-        Me.C1CboTipo.TabIndex = 96
-        Me.C1CboTipo.PropBag = resources.GetString("C1CboTipo.PropBag")
-        '
-        'TipoAvaBindingSource
-        '
-        Me.TipoAvaBindingSource.DataMember = "TipoAva"
-        Me.TipoAvaBindingSource.DataSource = Me.ProDSet
-        '
-        'C1CboCli
-        '
-        Me.C1CboCli.AllowColSelect = True
-        Me.C1CboCli.AutoSize = False
-        Me.C1CboCli.Caption = ""
-        Me.C1CboCli.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.C1CboCli.ColumnHeaders = False
-        Me.C1CboCli.ColumnWidth = 100
-        Me.C1CboCli.ContentHeight = 11
-        Me.C1CboCli.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Nombre cliente", True))
-        Me.C1CboCli.DataSource = Me.ClienteBindingSource
-        Me.C1CboCli.DeadAreaBackColor = System.Drawing.Color.Empty
-        Me.C1CboCli.DisplayMember = "Cliente"
-        Me.C1CboCli.EditorBackColor = System.Drawing.SystemColors.Window
-        Me.C1CboCli.ExtendRightColumn = True
-        Me.C1CboCli.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
-        Me.C1CboCli.Images.Add(CType(resources.GetObject("C1CboCli.Images"), System.Drawing.Image))
-        Me.C1CboCli.ItemHeight = 13
-        Me.C1CboCli.Location = New System.Drawing.Point(161, 171)
-        Me.C1CboCli.MatchEntryTimeout = CType(2000, Long)
-        Me.C1CboCli.MaxDropDownItems = CType(5, Short)
-        Me.C1CboCli.MaxLength = 32767
-        Me.C1CboCli.MouseCursor = System.Windows.Forms.Cursors.Default
-        Me.C1CboCli.Name = "C1CboCli"
-        Me.C1CboCli.RowSubDividerColor = System.Drawing.Color.DarkGray
-        Me.C1CboCli.Size = New System.Drawing.Size(200, 17)
-        Me.C1CboCli.TabIndex = 95
-        Me.C1CboCli.PropBag = resources.GetString("C1CboCli.PropBag")
-        '
-        'ClienteBindingSource
-        '
-        Me.ClienteBindingSource.DataMember = "Cliente"
-        Me.ClienteBindingSource.DataSource = Me.ProDSet
-        '
         'GpoStatus
         '
         Me.GpoStatus.BackColor = System.Drawing.Color.Transparent
@@ -834,161 +1012,6 @@ Partial Class frmPrincipal
         Me.rbtnEnCe.Text = "Entregado y Cerrado"
         Me.rbtnEnCe.UseVisualStyleBackColor = True
         '
-        'C1CboSol
-        '
-        Me.C1CboSol.AllowColSelect = True
-        Me.C1CboSol.AutoCompletion = True
-        Me.C1CboSol.AutoDropDown = True
-        Me.C1CboSol.AutoSelect = True
-        Me.C1CboSol.AutoSize = False
-        Me.C1CboSol.Caption = ""
-        Me.C1CboSol.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.C1CboSol.ColumnHeaders = False
-        Me.C1CboSol.ColumnWidth = 100
-        Me.C1CboSol.ContentHeight = 11
-        Me.C1CboSol.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Solicitado por", True))
-        Me.C1CboSol.DataSource = Me.ContactoBindingSource
-        Me.C1CboSol.DeadAreaBackColor = System.Drawing.Color.Empty
-        Me.C1CboSol.DisplayMember = "Contacto"
-        Me.C1CboSol.EditorBackColor = System.Drawing.SystemColors.Window
-        Me.C1CboSol.ExtendRightColumn = True
-        Me.C1CboSol.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
-        Me.C1CboSol.Images.Add(CType(resources.GetObject("C1CboSol.Images"), System.Drawing.Image))
-        Me.C1CboSol.ItemHeight = 13
-        Me.C1CboSol.Location = New System.Drawing.Point(161, 152)
-        Me.C1CboSol.MatchEntryTimeout = CType(2000, Long)
-        Me.C1CboSol.MaxDropDownItems = CType(5, Short)
-        Me.C1CboSol.MaxLength = 32767
-        Me.C1CboSol.MouseCursor = System.Windows.Forms.Cursors.Default
-        Me.C1CboSol.Name = "C1CboSol"
-        Me.C1CboSol.RowSubDividerColor = System.Drawing.Color.DarkGray
-        Me.C1CboSol.Size = New System.Drawing.Size(200, 17)
-        Me.C1CboSol.TabIndex = 92
-        Me.C1CboSol.ValueMember = "Contacto"
-        Me.C1CboSol.PropBag = resources.GetString("C1CboSol.PropBag")
-        '
-        'ContactoBindingSource
-        '
-        Me.ContactoBindingSource.DataMember = "Contacto"
-        Me.ContactoBindingSource.DataSource = Me.ProDSet
-        '
-        'C1TextBox9
-        '
-        Me.C1TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Status del pago", True))
-        Me.C1TextBox9.Location = New System.Drawing.Point(161, 230)
-        Me.C1TextBox9.Name = "C1TextBox9"
-        Me.C1TextBox9.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox9.TabIndex = 83
-        Me.C1TextBox9.Tag = Nothing
-        Me.C1TextBox9.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox9.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox8
-        '
-        Me.C1TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Campo10", True))
-        Me.C1TextBox8.Location = New System.Drawing.Point(161, 210)
-        Me.C1TextBox8.Name = "C1TextBox8"
-        Me.C1TextBox8.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox8.TabIndex = 81
-        Me.C1TextBox8.Tag = Nothing
-        Me.C1TextBox8.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox8.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox7
-        '
-        Me.C1TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Fecha ingr a catastro o de auorización", True))
-        Me.C1TextBox7.Location = New System.Drawing.Point(161, 190)
-        Me.C1TextBox7.Name = "C1TextBox7"
-        Me.C1TextBox7.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox7.TabIndex = 80
-        Me.C1TextBox7.Tag = Nothing
-        Me.C1TextBox7.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox7.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox5
-        '
-        Me.C1TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Núm escr o de cliente", True))
-        Me.C1TextBox5.DataType = GetType(Double)
-        Me.C1TextBox5.Location = New System.Drawing.Point(161, 132)
-        Me.C1TextBox5.Name = "C1TextBox5"
-        Me.C1TextBox5.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox5.TabIndex = 77
-        Me.C1TextBox5.Tag = Nothing
-        Me.C1TextBox5.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox5.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox2
-        '
-        Me.C1TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Domicilio", True))
-        Me.C1TextBox2.Location = New System.Drawing.Point(161, 73)
-        Me.C1TextBox2.Name = "C1TextBox2"
-        Me.C1TextBox2.Size = New System.Drawing.Size(190, 18)
-        Me.C1TextBox2.TabIndex = 75
-        Me.C1TextBox2.Tag = Nothing
-        Me.C1TextBox2.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox2.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox1
-        '
-        Me.C1TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Folio", True))
-        Me.C1TextBox1.DataType = GetType(Double)
-        Me.C1TextBox1.DisplayFormat.CustomFormat = "000"
-        Me.C1TextBox1.DisplayFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.FormatType Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
-        Me.C1TextBox1.EditFormat.CustomFormat = "000"
-        Me.C1TextBox1.EditFormat.Inherit = CType((((((C1.Win.C1Input.FormatInfoInheritFlags.FormatType Or C1.Win.C1Input.FormatInfoInheritFlags.NullText) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.EmptyAsNull) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimStart) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
-            Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
-        Me.C1TextBox1.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.C1TextBox1.Location = New System.Drawing.Point(161, 33)
-        Me.C1TextBox1.Name = "C1TextBox1"
-        Me.C1TextBox1.Size = New System.Drawing.Size(77, 18)
-        Me.C1TextBox1.TabIndex = 72
-        Me.C1TextBox1.Tag = Nothing
-        Me.C1TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.C1TextBox1.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1Button1
-        '
-        Me.C1Button1.Location = New System.Drawing.Point(642, 181)
-        Me.C1Button1.Name = "C1Button1"
-        Me.C1Button1.Size = New System.Drawing.Size(112, 28)
-        Me.C1Button1.TabIndex = 93
-        Me.C1Button1.Text = "C1Button1"
-        Me.C1Button1.UseVisualStyleBackColor = True
-        Me.C1Button1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1DateSol
-        '
-        Me.C1DateSol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1DateSol.Calendar.RightToLeft = System.Windows.Forms.RightToLeft.Inherit
-        Me.C1DateSol.Calendar.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1DateSol.Calendar.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1DateSol.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Fecha", True))
-        Me.C1DateSol.FormatType = C1.Win.C1Input.FormatTypeEnum.ShortDate
-        Me.C1DateSol.GapHeight = 0
-        Me.C1DateSol.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.C1DateSol.Location = New System.Drawing.Point(161, 53)
-        Me.C1DateSol.Name = "C1DateSol"
-        Me.C1DateSol.Size = New System.Drawing.Size(99, 18)
-        Me.C1DateSol.TabIndex = 73
-        Me.C1DateSol.Tag = Nothing
-        Me.C1DateSol.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.DropDown
-        Me.C1DateSol.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1DateSol.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
         'txtPagos
         '
         Me.txtPagos.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "pagos", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
@@ -1106,11 +1129,11 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel2.Collapsible = True
         Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGrid1)
         Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGridGroupPanel1)
-        Me.C1SplitterPanel2.Height = 197
-        Me.C1SplitterPanel2.Location = New System.Drawing.Point(0, 306)
+        Me.C1SplitterPanel2.Height = 156
+        Me.C1SplitterPanel2.Location = New System.Drawing.Point(0, 347)
         Me.C1SplitterPanel2.Name = "C1SplitterPanel2"
-        Me.C1SplitterPanel2.Size = New System.Drawing.Size(764, 165)
-        Me.C1SplitterPanel2.SizeRatio = 83.122R
+        Me.C1SplitterPanel2.Size = New System.Drawing.Size(764, 124)
+        Me.C1SplitterPanel2.SizeRatio = 79.592R
         Me.C1SplitterPanel2.TabIndex = 1
         Me.C1SplitterPanel2.Text = "Listado de Registros"
         '
@@ -1132,7 +1155,7 @@ Partial Class frmPrincipal
         Me.C1FlexGrid1.Rows.Count = 1
         Me.C1FlexGrid1.Rows.DefaultSize = 16
         Me.C1FlexGrid1.ShowCellLabels = True
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 121)
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 80)
         Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
         Me.C1FlexGrid1.TabIndex = 48
         Me.C1FlexGrid1.Tree.Column = 0
@@ -1144,7 +1167,7 @@ Partial Class frmPrincipal
         Me.C1FlexGridGroupPanel1.FlexGrid = Me.C1FlexGrid1
         Me.C1FlexGridGroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.C1FlexGridGroupPanel1.Name = "C1FlexGridGroupPanel1"
-        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(764, 165)
+        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(764, 124)
         Me.C1FlexGridGroupPanel1.TabIndex = 49
         Me.C1FlexGridGroupPanel1.Text = "Filtros"
         '
@@ -1311,23 +1334,15 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.PerformLayout()
         Me.GpoPrincipal.ResumeLayout(False)
         Me.GpoPrincipal.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1txtCosto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RegistroBindingNavigator.ResumeLayout(False)
-        Me.RegistroBindingNavigator.PerformLayout()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CboTipo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipoAvaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CboCli, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GpoStatus.ResumeLayout(False)
-        Me.GpoStatus.PerformLayout()
         CType(Me.C1CboSol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1336,8 +1351,16 @@ Partial Class frmPrincipal
         CType(Me.C1TextBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1DateSol, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RegistroBindingNavigator.ResumeLayout(False)
+        Me.RegistroBindingNavigator.PerformLayout()
+        Me.GpoStatus.ResumeLayout(False)
+        Me.GpoStatus.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
@@ -1439,7 +1462,7 @@ Partial Class frmPrincipal
     Friend WithEvents C1TextBox5 As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBox2 As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBox1 As C1.Win.C1Input.C1TextBox
-    Friend WithEvents C1Button1 As C1.Win.C1Input.C1Button
     Friend WithEvents C1DateSol As C1.Win.Calendar.C1DateEdit
     Friend WithEvents txtPagos As TextBox
+    Friend WithEvents C1txtCosto As C1.Win.C1Input.C1TextBox
 End Class

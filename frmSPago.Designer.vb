@@ -102,13 +102,14 @@ Partial Class frmSPago
         'C1FlexGrid1
         '
         Me.C1FlexGrid1.AutoResize = True
-        Me.C1FlexGrid1.ColumnInfo = "0,0,0,0,0,-1,Columns:"
+        Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
+        Me.C1FlexGrid1.DataSource = Me.PagosBindingSource
         Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexGrid1.Location = New System.Drawing.Point(487, 13)
+        Me.C1FlexGrid1.Location = New System.Drawing.Point(296, 13)
         Me.C1FlexGrid1.Name = "C1FlexGrid1"
         Me.C1FlexGrid1.Rows.Count = 1
         Me.C1FlexGrid1.Rows.DefaultSize = 16
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(302, 134)
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(493, 134)
         Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
         Me.C1FlexGrid1.TabIndex = 6
         Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
@@ -217,6 +218,7 @@ Partial Class frmSPago
         Me.C1Combo1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
         Me.C1Combo1.ColumnHeaders = False
         Me.C1Combo1.ColumnWidth = 100
+        Me.C1Combo1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.ContactoBindingSource, "id", True))
         Me.C1Combo1.DataSource = Me.ContactoBindingSource
         Me.C1Combo1.DeadAreaBackColor = System.Drawing.Color.Empty
         Me.C1Combo1.DisplayMember = "Contacto"
@@ -225,14 +227,14 @@ Partial Class frmSPago
         Me.C1Combo1.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
         Me.C1Combo1.Images.Add(CType(resources.GetObject("C1Combo1.Images"), System.Drawing.Image))
         Me.C1Combo1.LimitToList = True
-        Me.C1Combo1.Location = New System.Drawing.Point(169, 14)
+        Me.C1Combo1.Location = New System.Drawing.Point(65, 14)
         Me.C1Combo1.MatchEntryTimeout = CType(2000, Long)
         Me.C1Combo1.MaxDropDownItems = CType(5, Short)
         Me.C1Combo1.MaxLength = 32767
         Me.C1Combo1.MouseCursor = System.Windows.Forms.Cursors.Default
         Me.C1Combo1.Name = "C1Combo1"
         Me.C1Combo1.RowSubDividerColor = System.Drawing.Color.DarkGray
-        Me.C1Combo1.Size = New System.Drawing.Size(121, 21)
+        Me.C1Combo1.Size = New System.Drawing.Size(225, 21)
         Me.C1Combo1.TabIndex = 10
         Me.C1Combo1.Text = "Clientes"
         Me.C1Combo1.ValueMember = "idRegistro"

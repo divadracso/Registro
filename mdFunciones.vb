@@ -1,6 +1,8 @@
 ﻿Imports System.ComponentModel.Design
 Imports System.Configuration
+Imports System.Data.SqlClient
 Imports System.Reflection
+Imports System.Security.Cryptography
 Imports Registro.ProDSetTableAdapters
 
 Module mdFunciones
@@ -21,19 +23,19 @@ Module mdFunciones
             '    End If
             'If row.Item("Status_del_avalúo") <> Nothing Then
             If row.Item("Status del avalúo").ToString IsNot Nothing AndAlso row.Item("Status del avalúo").ToString = "Entregado y Cerrado" Then
-                    '' If row.Item("Status_del_avalúo") = "Entregado y Cerrado" Then
-                    ''MsgBox(row.Item("Status_del_avalúo").ToString)
-                    'If row("Status_del_avalúo").ToString = "CANCELADO" Then
-                    '    row.StyleNew.BackColor = Color.Red
-                    row.StyleNew.BackColor = Color.FromArgb(255, 255, 210)
-                    'End If
-                End If
-                If row.Item("Status del avalúo").ToString IsNot Nothing AndAlso row.Item("Status del avalúo").ToString = "Cancelado" Then
-                    row.StyleNew.BackColor = Color.Red
-                End If
-                If row.Item("Nombre cliente").ToString IsNot Nothing AndAlso row.Item("Nombre cliente").ToString = "IMSS" Then
-                    row.StyleNew.BackColor = Color.AliceBlue
-                End If
+                '' If row.Item("Status_del_avalúo") = "Entregado y Cerrado" Then
+                ''MsgBox(row.Item("Status_del_avalúo").ToString)
+                'If row("Status_del_avalúo").ToString = "CANCELADO" Then
+                '    row.StyleNew.BackColor = Color.Red
+                row.StyleNew.BackColor = Color.FromArgb(255, 255, 210)
+                'End If
+            End If
+            If row.Item("Status del avalúo").ToString IsNot Nothing AndAlso row.Item("Status del avalúo").ToString = "Cancelado" Then
+                row.StyleNew.BackColor = Color.Red
+            End If
+            If row.Item("Nombre cliente").ToString IsNot Nothing AndAlso row.Item("Nombre cliente").ToString = "IMSS" Then
+                row.StyleNew.BackColor = Color.AliceBlue
+            End If
 
             ' Else
 
@@ -89,6 +91,68 @@ Module mdFunciones
     '        'Console.WriteLine(a)
     '    End If
     'End Sub
+    Public Sub agregaCbo(cbo As Control)
+        Dim valbusc = CInt(frmPrincipal.BindingNavigatorPositionItem.Text)
+        Dim c1Cbo = CType(cbo, C1.Win.C1List.C1Combo)
+
+        'Dim ta As DataSet
+        If c1Cbo.Text <> Nothing Then
+            Dim valselect = c1Cbo.Text
+            Dim a As Integer
+            Dim ds As New ProDSet
+            Select Case cbo.Tag
+                Case "Cliente"
+                    Dim ta As New ClienteTableAdapter
+                    a = If(ta.Contar(c1Cbo.Text), 0)
+                    Dim ds2 = frmPrincipal.ProDSet.Cliente
+                    If a = 0 Then
+                        ta.Insert(1, c1Cbo.Text)
+                        ta.Fill(ds2)
+                        c1Cbo.Text = c1Cbo.GetItemText(c1Cbo.FindString(valselect), "Cliente")
+
+                    End If
+                Case "TipoAva"
+                    Dim ta As New TipoAvaTableAdapter
+                    a = If(ta.Contar(c1Cbo.Text), 0)
+                    Dim ds2 = frmPrincipal.ProDSet.TipoAva
+                    If a = 0 Then
+                        ta.Insert(1, c1Cbo.Text)
+                        ta.Fill(ds2)
+                        c1Cbo.Text = c1Cbo.GetItemText(c1Cbo.FindString(valselect), "TipoAva")
+
+                    End If
+                Case "Contacto"
+                    Dim ta As New ContactoTableAdapter
+                    a = If(ta.Contar(c1Cbo.Text), 0)
+                    Dim txtdt As New RegistroTableAdapter
+                    Dim dt = txtdt.GetData
+
+                    Dim index As Integer = FindRowIndex(dt, "id", valbusc)
+                    Dim ds2 = frmPrincipal.ProDSet.Contacto
+                    If a = 0 Then
+                        ta.Insert(index + 1, c1Cbo.Text)
+                        ta.Fill(ds2)
+                        c1Cbo.Text = c1Cbo.GetItemText(c1Cbo.FindString(valselect), "Contacto")
+
+                    End If
+                Case "Municipio"
+                    Dim ta As New MunicipioTableAdapter
+                    a = If(ta.Contar(c1Cbo.Text), 0)
+                    Dim ds2 = frmPrincipal.ProDSet.Municipio
+                    If a = 0 Then
+                        ta.Insert(1, c1Cbo.Text)
+                        ta.Fill(ds2)
+                        c1Cbo.Text = c1Cbo.GetItemText(c1Cbo.FindString(valselect), "Municipio")
+
+                    End If
+                    ' ta = MunicipioTableAdapter
+
+            End Select
+
+
+        End If
+
+    End Sub
     Public Sub agregaCboSol()
 
         If frmPrincipal.C1CboSol.Text <> Nothing Then

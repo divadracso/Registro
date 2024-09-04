@@ -1,5 +1,5 @@
 ﻿Public Class frmMain
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         frmPrincipal.MdiParent = Me
         frmSPago.MdiParent = Me
         frmPrincipal.WindowState = FormWindowState.Maximized
@@ -69,5 +69,12 @@
             lbl.Left = (Me.ClientSize.Width - lbl.Width) / 2
             lbl.Top = (Me.ClientSize.Height - lbl.Height) / 2
         End If
+    End Sub
+
+    Private Sub AbrirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AbrirToolStripMenuItem.Click
+        frmPrincipal.MdiParent = Me
+        frmSPago.MdiParent = Me
+        frmPrincipal.WindowState = FormWindowState.Maximized
+        frmPrincipal.Show()
     End Sub
 End Class

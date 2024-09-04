@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
 Imports System.Drawing.Imaging
 Imports System.Reflection.Emit
 Imports System.Threading
@@ -6,6 +7,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports C1.Win
 Imports C1.Win.C1FlexGrid
 Imports C1.Win.C1Input
+Imports C1.Win.C1List
 Imports Registro.ProDSetTableAdapters
 
 Public Class frmPrincipal
@@ -162,18 +164,49 @@ Public Class frmPrincipal
     'End Sub
 
     Private Sub Solicitado_porComboBox_Validated(sender As Object, e As EventArgs) Handles C1CboSol.Validated, C1CboCli.Validated, C1CboMun.Validated, C1CboTipo.Validated 'Solicitado_porComboBox.Validated, C1CboSol.Validated
-        If sender.name = "C1CboSol" Then
-            agregaCboSol()
-        End If
-        If sender.name = "C1CboCli" Then
-            agregaCboCli()
-        End If
-        If sender.name = "C1CboMun" Then
-            agregaCboMun()
-        End If
-        If sender.name = "C1CboTipo" Then
-            agregaCboTipo()
-        End If
+        'Dim q = RegistroBindingSource.DataSource.ProDSetTableAdapters.
+        ' Dim db As BindingSource = sender.DataSource
+
+        agregaCbo(sender)
+        'RegistroBindingSource.
+        'RegistroBindingSource.
+
+
+        'MsgBox(TypeOf (dataSource))
+        'If TypeOf dataSource Is DataTable Then
+        '    Dim dt As DataTable = CType(dataSource, DataTable)
+        '    MessageBox.Show("El DataSource es un DataTable con " & dt.Rows.Count & " filas." & dt.TableName)
+        'Else
+        '    If TypeOf dataSource Is BindingSource Then
+        '        Dim bd As BindingSource = CType(dataSource, BindingSource)
+        '        MessageBox.Show("El DataSource es un D " & bd.DataSource.ToString & " filas." & bd.DataMember.ToString & " " & bd.Current.ToString)
+        '    Else
+        '        MessageBox.Show("El DataSource no es un DataTable.")
+        '    End If
+        '    ' MessageBox.Show("El DataSource no es un DataTable.")
+        'End If
+
+        'Dim ctr = CType(sender, C1.Win.C1List.C1Combo)
+        'For Each obj As Object In ctr.DataBindings
+        '    Console.WriteLine(obj.ToString)
+        'Next
+        'Console.WriteLine(ctr.ValueMember.ToString())
+        'Console.WriteLine(ctr.DataSource.ToString())
+        'For Each obj As DataRowView In ctr.DataSource
+        '    Console.WriteLine(obj.DataView.n)
+        'Next
+        'If sender.name = "C1CboSol" Then
+        '    agregaCboSol()
+        'End If
+        'If sender.name = "C1CboCli" Then
+        '    agregaCboCli()
+        'End If
+        'If sender.name = "C1CboMun" Then
+        '    agregaCboMun()
+        'End If
+        'If sender.name = "C1CboTipo" Then
+        '    agregaCboTipo()
+        'End If
     End Sub
 
     Private Sub btnComentar_Click(sender As Object, e As EventArgs) Handles btnComentar.Click

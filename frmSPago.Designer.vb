@@ -28,31 +28,31 @@ Partial Class frmSPago
         Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProDSet = New Registro.ProDSet()
         Me.c1btnSol = New C1.Win.C1Input.C1Button()
-        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.C1FlexGrid2 = New C1.Win.C1FlexGrid.C1FlexGrid()
-        Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RegistroTableAdapter = New Registro.ProDSetTableAdapters.RegistroTableAdapter()
-        Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
-        Me.TableAdapterManager = New Registro.ProDSetTableAdapters.TableAdapterManager()
-        Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.C1Combo1 = New C1.Win.C1List.C1Combo()
+        Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RegistroTableAdapter = New Registro.ProDSetTableAdapters.RegistroTableAdapter()
+        Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
+        Me.TableAdapterManager = New Registro.ProDSetTableAdapters.TableAdapterManager()
+        Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
         CType(Me.C1FlexReg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1btnSol, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'C1FlexReg
@@ -63,7 +63,6 @@ Partial Class frmSPago
         Me.C1FlexReg.ColumnInfo = resources.GetString("C1FlexReg.ColumnInfo")
         Me.C1FlexReg.DataSource = Me.RegistroBindingSource
         Me.C1FlexReg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexReg.IgnoreDiacritics = True
         Me.C1FlexReg.Location = New System.Drawing.Point(65, 165)
         Me.C1FlexReg.Name = "C1FlexReg"
         Me.C1FlexReg.Rows.Count = 1
@@ -94,11 +93,6 @@ Partial Class frmSPago
         Me.c1btnSol.UseVisualStyleBackColor = True
         Me.c1btnSol.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
-        'ContactoBindingSource
-        '
-        Me.ContactoBindingSource.DataMember = "Contacto"
-        Me.ContactoBindingSource.DataSource = Me.ProDSet
-        '
         'C1FlexGrid1
         '
         Me.C1FlexGrid1.AutoResize = True
@@ -113,6 +107,11 @@ Partial Class frmSPago
         Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
         Me.C1FlexGrid1.TabIndex = 6
         Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
+        '
+        'PagosBindingSource
+        '
+        Me.PagosBindingSource.DataMember = "Pagos"
+        Me.PagosBindingSource.DataSource = Me.ProDSet
         '
         'Button1
         '
@@ -129,43 +128,11 @@ Partial Class frmSPago
         Me.C1FlexGrid2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.C1FlexGrid2.Location = New System.Drawing.Point(12, 306)
         Me.C1FlexGrid2.Name = "C1FlexGrid2"
+        Me.C1FlexGrid2.Rows.DefaultSize = 16
         Me.C1FlexGrid2.Size = New System.Drawing.Size(791, 150)
         Me.C1FlexGrid2.StyleInfo = resources.GetString("C1FlexGrid2.StyleInfo")
         Me.C1FlexGrid2.TabIndex = 8
         Me.C1FlexGrid2.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
-        '
-        'PagosBindingSource
-        '
-        Me.PagosBindingSource.DataMember = "Pagos"
-        Me.PagosBindingSource.DataSource = Me.ProDSet
-        '
-        'RegistroTableAdapter
-        '
-        Me.RegistroTableAdapter.ClearBeforeFill = True
-        '
-        'ContactoTableAdapter
-        '
-        Me.ContactoTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ClienteTableAdapter = Nothing
-        Me.TableAdapterManager.ContactoTableAdapter = Me.ContactoTableAdapter
-        Me.TableAdapterManager.ListadoTableAdapter = Nothing
-        Me.TableAdapterManager.MunicipioTableAdapter = Nothing
-        Me.TableAdapterManager.NotasTableAdapter = Nothing
-        Me.TableAdapterManager.PagosTableAdapter = Nothing
-        Me.TableAdapterManager.RegistroTableAdapter = Nothing
-        Me.TableAdapterManager.TelefonoTableAdapter = Nothing
-        Me.TableAdapterManager.TipoAvaTableAdapter = Nothing
-        Me.TableAdapterManager.TipoTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Registro.ProDSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
-        '
-        'PagosTableAdapter
-        '
-        Me.PagosTableAdapter.ClearBeforeFill = True
         '
         'Panel1
         '
@@ -237,9 +204,42 @@ Partial Class frmSPago
         Me.C1Combo1.Size = New System.Drawing.Size(225, 21)
         Me.C1Combo1.TabIndex = 10
         Me.C1Combo1.Text = "Clientes"
-        Me.C1Combo1.ValueMember = "idRegistro"
+        Me.C1Combo1.ValueMember = "id"
         Me.C1Combo1.VisualStyle = C1.Win.C1List.VisualStyle.Office2010Blue
         Me.C1Combo1.PropBag = resources.GetString("C1Combo1.PropBag")
+        '
+        'ContactoBindingSource
+        '
+        Me.ContactoBindingSource.DataMember = "Contacto"
+        Me.ContactoBindingSource.DataSource = Me.ProDSet
+        '
+        'RegistroTableAdapter
+        '
+        Me.RegistroTableAdapter.ClearBeforeFill = True
+        '
+        'ContactoTableAdapter
+        '
+        Me.ContactoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClienteTableAdapter = Nothing
+        Me.TableAdapterManager.ContactoTableAdapter = Me.ContactoTableAdapter
+        Me.TableAdapterManager.ListadoTableAdapter = Nothing
+        Me.TableAdapterManager.MunicipioTableAdapter = Nothing
+        Me.TableAdapterManager.NotasTableAdapter = Nothing
+        Me.TableAdapterManager.PagosTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroTableAdapter = Nothing
+        Me.TableAdapterManager.TelefonoTableAdapter = Nothing
+        Me.TableAdapterManager.TipoAvaTableAdapter = Nothing
+        Me.TableAdapterManager.TipoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Registro.ProDSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
+        '
+        'PagosTableAdapter
+        '
+        Me.PagosTableAdapter.ClearBeforeFill = True
         '
         'frmSPago
         '
@@ -254,15 +254,15 @@ Partial Class frmSPago
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1btnSol, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitContainer1.ResumeLayout(False)
         Me.C1SplitterPanel1.ResumeLayout(False)
         Me.C1SplitterPanel1.PerformLayout()
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

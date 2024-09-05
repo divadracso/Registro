@@ -305,6 +305,19 @@ Module mdFunciones
                 End If
             Next
         End If
+        'If frmPrincipal.C1TextBox9.Text = "Pagado" Then
+        '    frmPrincipal.C1ChkPagado.Checked = True
+        'Else
+        '    frmPrincipal.C1ChkPagado.Checked = False
+        '    frmPrincipal.C1ChkPagado.Text = "Pagar"
+        'End If
+        If frmPrincipal.C1ChkPagado.Text = "Pagado" Then
+            frmPrincipal.C1ChkPagado.Checked = True
+            frmPrincipal.C1TxtPagado.Text = frmPrincipal.C1txtCosto.Text
+        Else
+            frmPrincipal.C1ChkPagado.Checked = False
+            frmPrincipal.C1ChkPagado.Text = "Pagar"
+        End If
 
         'frmPrincipal.RegistroDataGridView.ResumeLayout()
         'frmPrincipal.ResumeLayout()

@@ -7011,10 +7011,10 @@ Namespace ProDSetTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT       Registro.Folio, Registro.Fecha, Registro.Domicilio, Registro.Municip"& _ 
-                "io, Registro.[tipo de avalúo], Registro.[Solicitado por], Registro.[Nombre clien"& _ 
-                "te], Registro.[Status del pago], Registro.[Status del avalúo], Registro.pagos, P"& _ 
-                "agos.Cant, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Pagos.Fecha AS FechaPago, Pagos.idCont"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
+            Me._commandCollection(2).CommandText = "SELECT       Pagos.Cant, Registro.Folio, Registro.Fecha, Registro.Domicilio, Regi"& _ 
+                "stro.Municipio, Registro.[tipo de avalúo], Registro.[Solicitado por], Registro.["& _ 
+                "Nombre cliente], Registro.[Status del pago], Registro.[Status del avalúo], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "                      Pagos.Fecha AS FechaPago, Pagos.idCont, Registro.pagos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
                 "OM            (Registro INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Pagos ON Registro.I"& _ 
                 "d = Pagos.idAva)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Pagos.idCont = ?)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text

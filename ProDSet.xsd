@@ -258,8 +258,8 @@ GROUP BY Municipio</CommandText>
               <DbSource ConnectionRef="ProConnStr (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByContacto" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByContacto" GeneratorSourceName="FillByContacto" GetMethodModifier="Public" GetMethodName="GetDataByContacto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByContacto" UserSourceName="FillByContacto">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT       Registro.Folio, Registro.Fecha, Registro.Domicilio, Registro.Municipio, Registro.[tipo de avalúo], Registro.[Solicitado por], Registro.[Nombre cliente], Registro.[Status del pago], Registro.[Status del avalúo], Registro.pagos, Pagos.Cant, 
-                         Pagos.Fecha AS FechaPago, Pagos.idCont
+                    <CommandText>SELECT       Pagos.Cant, Registro.Folio, Registro.Fecha, Registro.Domicilio, Registro.Municipio, Registro.[tipo de avalúo], Registro.[Solicitado por], Registro.[Nombre cliente], Registro.[Status del pago], Registro.[Status del avalúo], 
+                         Pagos.Fecha AS FechaPago, Pagos.idCont, Registro.pagos
 FROM            (Registro INNER JOIN
                          Pagos ON Registro.Id = Pagos.idAva)
 WHERE        (Pagos.idCont = ?)</CommandText>
@@ -955,7 +955,7 @@ WHERE        (Pagos.idCont = ?)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Fecha_x0020_ingr_x0020_a_x0020_catastro_x0020_o_x0020_de_x0020_auorización" msprop:Generator_UserColumnName="Fecha ingr a catastro o de auorización" msprop:Generator_ColumnPropNameInTable="Fecha_ingr_a_catastro_o_de_auorizaciónColumn" msprop:Generator_ColumnPropNameInRow="Fecha_ingr_a_catastro_o_de_auorización" msprop:Generator_ColumnVarNameInTable="columnFecha_ingr_a_catastro_o_de_auorización" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fecha_x0020_ingr_x0020_a_x0020_catastro_x0020_o_x0020_de_x0020_auorización" msprop:Generator_ColumnPropNameInTable="Fecha_ingr_a_catastro_o_de_auorizaciónColumn" msprop:Generator_ColumnPropNameInRow="Fecha_ingr_a_catastro_o_de_auorización" msprop:Generator_UserColumnName="Fecha ingr a catastro o de auorización" msprop:Generator_ColumnVarNameInTable="columnFecha_ingr_a_catastro_o_de_auorización" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Status_x0020_del_x0020_pago" msprop:Generator_ColumnPropNameInTable="Status_del_pagoColumn" msprop:Generator_ColumnPropNameInRow="Status_del_pago" msprop:Generator_UserColumnName="Status del pago" msprop:Generator_ColumnVarNameInTable="columnStatus_del_pago" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -970,7 +970,7 @@ WHERE        (Pagos.idCont = ?)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Costo" msprop:Generator_UserColumnName="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_ColumnVarNameInTable="columnCosto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_UserColumnName="Costo" msprop:Generator_ColumnVarNameInTable="columnCosto" type="xs:decimal" minOccurs="0" />
               <xs:element name="pagos" msprop:Generator_ColumnPropNameInTable="pagosColumn" msprop:Generator_ColumnPropNameInRow="pagos" msprop:Generator_UserColumnName="pagos" msprop:Generator_ColumnVarNameInTable="columnpagos" type="xs:decimal" minOccurs="0" />
               <xs:element name="Pagos" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowClassName="PagosRow" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>

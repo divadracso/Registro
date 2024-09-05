@@ -506,6 +506,25 @@ Public Class frmPrincipal
         e.Graphics.DrawString(titulo, fuente, brocha, x, y)
     End Sub
 
+    Private Sub C1ChkPagado_CheckedChanged(sender As Object, e As EventArgs) Handles C1ChkPagado.CheckedChanged
+        'If C1ChkPagado.Checked Then C1TextBox9.Text = "Pagado"
+        If C1ChkPagado.Checked Then C1ChkPagado.Text = "Pagado"
+        If C1ChkPagado.Checked = False Then C1ChkPagado.Text = "Pagar"
+        If C1ChkPagado.Checked Then C1TxtPagado.Text = C1txtCosto.Text
+    End Sub
+
+    Private Sub C1Button1_Click(sender As Object, e As EventArgs) Handles C1Button1.Click
+        'frmDgoPagos.MdiParent = Me.ParentForm
+        'frmDgoPagos.TopLevel = True
+        'frmSPago.WindowState = FormWindowState.Maximized
+        DialogResult = frmDgoPagos.ShowDialog()
+        If DialogResult = 1 Then
+            guardar()
+        End If
+    End Sub
+
+
+
 
 
 

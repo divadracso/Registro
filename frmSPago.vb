@@ -155,7 +155,7 @@ Public Class frmSPago
 
         Me.RegistroTableAdapter.FillByContacto(ProDSet.Registro, CInt(C1Combo1.SelectedValue.ToString))
         ' Me.C1FlexReg.Aggregate(sum)
-        'C1FlexReg.DataSource = RegistroBindingSource
+        C1FlexReg.DataSource = RegistroBindingSource
         For Each col As System.Data.DataColumn In dt.Columns
             If col.ColumnName = "Id" Or col.ColumnName = "idCont" Or col.ColumnName = "idAva" Then
                 C1FlexGrid1.Cols.Item(col.ColumnName).Visible = False
@@ -242,7 +242,7 @@ Public Class frmSPago
         Dim nuevaFila As Integer = C1FlexReg.Rows.Count
         'Dim fuente As FontStyle = FontStyle.Bold
         Dim fuente As Font = New Font(fuenteActual.FontFamily, fuenteActual.Size, FontStyle.Bold)
-
+        C1FlexReg.Cols("Cant").Format = "C2"
         Dim estilo As CellStyle = C1FlexGrid1.Styles.Add("BoldStyle")
         estilo.Font = fuente
         C1FlexReg.Rows.Add()

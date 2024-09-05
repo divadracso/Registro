@@ -518,6 +518,7 @@ Public Class frmPrincipal
         'frmDgoPagos.TopLevel = True
         'frmSPago.WindowState = FormWindowState.Maximized
         DialogResult = frmDgoPagos.ShowDialog()
+        MsgBox(DialogResult)
         If DialogResult = 1 Then
             guardar()
         End If

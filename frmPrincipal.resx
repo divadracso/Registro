@@ -156,8 +156,17 @@
   <metadata name="Tipo_de_avalúoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="RegistroBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>623, 17</value>
+  </metadata>
   <metadata name="BindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>719, 54</value>
+  </metadata>
+  <metadata name="NotasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>189, 54</value>
+  </metadata>
+  <metadata name="C1SplitterPanel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="C1FlexGrid1.ColumnInfo" xml:space="preserve">
     <value>18,1,0,0,0,-1,Columns:0{Width:18;}	1{Width:23;Name:"Id";Caption:"Id";Visible:False;Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	2{Width:36;Name:"Folio";Caption:"Folio";Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	3{Width:44;Name:"Fecha";Caption:"Fecha";Style:"Format:""d"";DataType:System.DateTime;TextAlign:LeftCenter;";}	4{Width:56;Name:"Domicilio";Caption:"Domicilio";Style:"DataType:System.String;TextAlign:LeftCenter;";}	5{Width:59;Name:"Municipio";Caption:"Municipio";Style:"DataType:System.String;TextAlign:LeftCenter;";}	6{Width:81;Name:"tipo de avalúo";Caption:"tipo de avalúo";Style:"DataType:System.String;TextAlign:LeftCenter;";}	7{Width:117;Name:"Núm escr o de cliente";Caption:"Núm escr o de cliente";Style:"DataType:System.Double;TextAlign:GeneralCenter;";}	8{Width:78;Name:"Solicitado por";Caption:"Solicitado por";Style:"DataType:System.String;TextAlign:LeftCenter;";}	9{Width:85;Name:"Nombre cliente";Caption:"Nombre cliente";Style:"DataType:System.String;TextAlign:LeftCenter;";}	10{Width:59;Name:"Campo10";Caption:"Campo10";Style:"DataType:System.String;TextAlign:LeftCenter;";}	11{Width:195;Name:"Fecha ingr a catastro o de auorización";Caption:"Fecha ingr a catastro o de auorización";Style:"Format:""d"";DataType:System.DateTime;TextAlign:LeftCenter;";}	12{Width:88;Name:"Status del pago";Caption:"Status del pago";Style:"DataType:System.String;TextAlign:LeftCenter;";}	13{Width:96;Name:"Status del avalúo";Caption:"Status del avalúo";Style:"DataType:System.String;TextAlign:LeftCenter;";}	14{Width:41;Name:"Costo";Caption:"Costo";Style:"Format:""C2"";DataType:System.Decimal;TextAlign:GeneralCenter;";}	15{Width:43;Name:"pagos";Caption:"pagos";Visible:False;Style:"Format:""C2"";DataType:System.Decimal;TextAlign:GeneralCenter;";}	16{Name:"Registro_Pagos";Caption:"Registro_Pagos";Visible:False;AllowEditing:False;Style:"DataType:System.ComponentModel.IBindingList;TextAlign:GeneralCenter;";}	17{Name:"Registro_Notas";Caption:"Registro_Notas";Visible:False;AllowEditing:False;Style:"DataType:System.ComponentModel.IBindingList;TextAlign:GeneralCenter;";}	</value>
@@ -171,14 +180,11 @@
   <data name="C1FlexGrid1.StyleInfo" xml:space="preserve">
     <value>Normal{ForeColor:30, 57, 91;}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:183, 219, 255;ForeColor:ControlText;SearchBackColor:Orange;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	Footer{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	FirstCustomStyle{}	</value>
   </data>
-  <metadata name="RegistroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>113, 17</value>
-  </metadata>
   <metadata name="ProDSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="RegistroBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>623, 17</value>
+  <metadata name="RegistroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>113, 17</value>
   </metadata>
   <metadata name="MunicipioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>831, 91</value>
@@ -241,9 +247,6 @@
   </data>
   <metadata name="ContactoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>813, 17</value>
-  </metadata>
-  <metadata name="NotasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>189, 54</value>
   </metadata>
   <metadata name="NotasBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>189, 54</value>
@@ -321,18 +324,6 @@
         vAAADrwBlbxySQAAAExJREFUOE9joAr49u3bf1IxVCsEgAWC58Dxh/cf4RhZDETHTNiHaQgpBoAwzBCo
         dtINAGGiDUDGyGpoawAxeNSAQWkAORiqnRLAwAAA9EMMU8Daa3MAAAAASUVORK5CYII=
 </value>
-  </data>
-  <metadata name="BindingNavigator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>719, 54</value>
-  </metadata>
-  <metadata name="RegistroPagosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>512, 128</value>
-  </metadata>
-  <data name="C1FlexPagos.ColumnInfo" xml:space="preserve">
-    <value>6,1,0,0,0,-1,Columns:1{Width:27;Name:"Id";Caption:"Id";Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	2{Width:41;Name:"idAva";Caption:"idAva";Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	3{Width:43;Name:"idCont";Caption:"idCont";Style:"DataType:System.Int32;TextAlign:GeneralCenter;";}	4{Name:"Cant";Caption:"Cant";Style:"Format:""C2"";DataType:System.Decimal;TextAlign:GeneralCenter;";}	5{Name:"Fecha";Caption:"Fecha";Style:"Format:""d"";DataType:System.DateTime;TextAlign:LeftCenter;";}	</value>
-  </data>
-  <data name="C1FlexPagos.StyleInfo" xml:space="preserve">
-    <value>Normal{}	Alternate{}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	Highlight{BackColor:183, 219, 255;ForeColor:ControlText;SearchBackColor:Orange;}	Focus{}	Editor{}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	FrozenAlternate{}	NewRow{ForeColor:GrayText;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	SelectedColumnHeader{}	SelectedRowHeader{}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	FilterEditor{}	Footer{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;BackgroundImageLayout:Hide;}	FirstCustomStyle{}	</value>
   </data>
   <metadata name="RegistroPagosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>512, 128</value>

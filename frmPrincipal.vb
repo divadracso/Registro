@@ -520,6 +520,12 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        frmPPC.MdiParent = Me.ParentForm
+        frmPPC.WindowState = FormWindowState.Maximized
+        frmPPC.Show()
+    End Sub
+
 
 
 

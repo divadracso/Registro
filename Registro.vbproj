@@ -123,6 +123,12 @@
     <Compile Include="frmCom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPPC.Designer.vb">
+      <DependentUpon>frmPPC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPPC.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSPago.Designer.vb">
       <DependentUpon>frmSPago.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCom.resx">
       <DependentUpon>frmCom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPPC.resx">
+      <DependentUpon>frmPPC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSPago.resx">
       <DependentUpon>frmSPago.vb</DependentUpon>

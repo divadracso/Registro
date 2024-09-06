@@ -39,12 +39,12 @@ Partial Class frmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.GpoPrincipal = New System.Windows.Forms.GroupBox()
         Me.C1Button1 = New C1.Win.C1Input.C1Button()
-        Me.C1ChkPagado = New C1.Win.C1Input.C1CheckBox()
+        Me.C1TxtPagado = New C1.Win.C1Input.C1TextBox()
         Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProDSet = New Registro.ProDSet()
-        Me.GpoPrincipal = New System.Windows.Forms.GroupBox()
-        Me.C1TxtPagado = New C1.Win.C1Input.C1TextBox()
+        Me.C1ChkPagado = New C1.Win.C1Input.C1CheckBox()
         Me.C1txtCosto = New C1.Win.C1Input.C1TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.C1CboMun = New C1.Win.C1List.C1Combo()
@@ -67,6 +67,7 @@ Partial Class frmPrincipal
         Me.C1txtNotas = New C1.Win.C1Input.C1TextBox()
         Me.NotasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1FlexGridSearchPanel1 = New C1.Win.C1FlexGrid.C1FlexGridSearchPanel()
+        Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.RegistroBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -107,7 +108,6 @@ Partial Class frmPrincipal
         Me.BindingNavigatorMoveLastItem1 = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.C1SplitterPanel2 = New C1.Win.C1SplitContainer.C1SplitterPanel()
-        Me.C1FlexGrid1 = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.C1FlexGridGroupPanel1 = New C1.Win.C1FlexGrid.C1FlexGridGroupPanel()
         Me.RegistroPagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -123,6 +123,7 @@ Partial Class frmPrincipal
         Me.TipoAvaTableAdapter = New Registro.ProDSetTableAdapters.TipoAvaTableAdapter()
         Me.MunicipioTableAdapter = New Registro.ProDSetTableAdapters.MunicipioTableAdapter()
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
+        Me.Button2 = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         Status_del_avalúoLabel = New System.Windows.Forms.Label()
         Status_del_pagoLabel = New System.Windows.Forms.Label()
@@ -139,12 +140,12 @@ Partial Class frmPrincipal
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
+        Me.GpoPrincipal.SuspendLayout()
         CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1ChkPagado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1TxtPagado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GpoPrincipal.SuspendLayout()
-        CType(Me.C1TxtPagado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1ChkPagado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1txtCosto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,13 +166,13 @@ Partial Class frmPrincipal
         CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RegistroBindingNavigator.SuspendLayout()
         Me.GpoStatus.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.C1SplitterPanel2.SuspendLayout()
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -333,49 +334,9 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.TabIndex = 0
         Me.C1SplitterPanel1.Text = "Datos del Avalúo Solicitado"
         '
-        'C1Button1
-        '
-        Me.C1Button1.Location = New System.Drawing.Point(683, 184)
-        Me.C1Button1.Name = "C1Button1"
-        Me.C1Button1.Size = New System.Drawing.Size(75, 23)
-        Me.C1Button1.TabIndex = 65
-        Me.C1Button1.Text = "C1Button1"
-        Me.C1Button1.UseVisualStyleBackColor = True
-        Me.C1Button1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1ChkPagado
-        '
-        Me.C1ChkPagado.Appearance = System.Windows.Forms.Appearance.Button
-        Me.C1ChkPagado.BackColor = System.Drawing.Color.Transparent
-        Me.C1ChkPagado.BorderColor = System.Drawing.Color.Transparent
-        Me.C1ChkPagado.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.C1ChkPagado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Status del pago", True))
-        Me.C1ChkPagado.DataType = GetType(Char)
-        Me.C1ChkPagado.ForeColor = System.Drawing.Color.Black
-        Me.C1ChkPagado.Location = New System.Drawing.Point(161, 227)
-        Me.C1ChkPagado.Name = "C1ChkPagado"
-        Me.C1ChkPagado.Padding = New System.Windows.Forms.Padding(1)
-        Me.C1ChkPagado.Size = New System.Drawing.Size(68, 23)
-        Me.C1ChkPagado.TabIndex = 64
-        Me.C1ChkPagado.Text = "Pagar"
-        Me.C1ChkPagado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.C1ChkPagado.UseVisualStyleBackColor = True
-        Me.C1ChkPagado.Value = Nothing
-        Me.C1ChkPagado.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1ChkPagado.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'RegistroBindingSource
-        '
-        Me.RegistroBindingSource.DataMember = "Registro"
-        Me.RegistroBindingSource.DataSource = Me.ProDSet
-        '
-        'ProDSet
-        '
-        Me.ProDSet.DataSetName = "ProDSet"
-        Me.ProDSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'GpoPrincipal
         '
+        Me.GpoPrincipal.Controls.Add(Me.Button2)
         Me.GpoPrincipal.Controls.Add(Me.C1Button1)
         Me.GpoPrincipal.Controls.Add(Me.C1TxtPagado)
         Me.GpoPrincipal.Controls.Add(Me.C1ChkPagado)
@@ -416,6 +377,16 @@ Partial Class frmPrincipal
         Me.GpoPrincipal.TabIndex = 63
         Me.GpoPrincipal.TabStop = False
         '
+        'C1Button1
+        '
+        Me.C1Button1.Location = New System.Drawing.Point(683, 184)
+        Me.C1Button1.Name = "C1Button1"
+        Me.C1Button1.Size = New System.Drawing.Size(75, 23)
+        Me.C1Button1.TabIndex = 65
+        Me.C1Button1.Text = "C1Button1"
+        Me.C1Button1.UseVisualStyleBackColor = True
+        Me.C1Button1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
         'C1TxtPagado
         '
         Me.C1TxtPagado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -441,6 +412,37 @@ Partial Class frmPrincipal
         Me.C1TxtPagado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.C1TxtPagado.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         Me.C1TxtPagado.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        '
+        'RegistroBindingSource
+        '
+        Me.RegistroBindingSource.DataMember = "Registro"
+        Me.RegistroBindingSource.DataSource = Me.ProDSet
+        '
+        'ProDSet
+        '
+        Me.ProDSet.DataSetName = "ProDSet"
+        Me.ProDSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'C1ChkPagado
+        '
+        Me.C1ChkPagado.Appearance = System.Windows.Forms.Appearance.Button
+        Me.C1ChkPagado.BackColor = System.Drawing.Color.Transparent
+        Me.C1ChkPagado.BorderColor = System.Drawing.Color.Transparent
+        Me.C1ChkPagado.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.C1ChkPagado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Status del pago", True))
+        Me.C1ChkPagado.DataType = GetType(Char)
+        Me.C1ChkPagado.ForeColor = System.Drawing.Color.Black
+        Me.C1ChkPagado.Location = New System.Drawing.Point(161, 227)
+        Me.C1ChkPagado.Name = "C1ChkPagado"
+        Me.C1ChkPagado.Padding = New System.Windows.Forms.Padding(1)
+        Me.C1ChkPagado.Size = New System.Drawing.Size(68, 23)
+        Me.C1ChkPagado.TabIndex = 64
+        Me.C1ChkPagado.Text = "Pagar"
+        Me.C1ChkPagado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.C1ChkPagado.UseVisualStyleBackColor = True
+        Me.C1ChkPagado.Value = Nothing
+        Me.C1ChkPagado.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
+        Me.C1ChkPagado.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
         'C1txtCosto
         '
@@ -787,6 +789,31 @@ Partial Class frmPrincipal
         Me.C1FlexGridSearchPanel1.Size = New System.Drawing.Size(232, 41)
         Me.C1FlexGridSearchPanel1.TabIndex = 50
         Me.C1FlexGridSearchPanel1.Watermark = "Entre texto a buscar..."
+        '
+        'C1FlexGrid1
+        '
+        Me.C1FlexGrid1.AllowDelete = True
+        Me.C1FlexGrid1.AllowEditing = False
+        Me.C1FlexGrid1.AllowFiltering = True
+        Me.C1FlexGrid1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.C1FlexGrid1.AutoResize = True
+        Me.C1FlexGridSearchPanel1.SetC1FlexGridSearchPanel(Me.C1FlexGrid1, Me.C1FlexGridSearchPanel1)
+        Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
+        Me.C1FlexGrid1.DataSource = Me.RegistroBindingSource
+        Me.C1FlexGrid1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.C1FlexGrid1.Location = New System.Drawing.Point(0, 44)
+        Me.C1FlexGrid1.Name = "C1FlexGrid1"
+        Me.C1FlexGrid1.Rows.Count = 1
+        Me.C1FlexGrid1.Rows.DefaultSize = 16
+        Me.C1FlexGrid1.ShowCellLabels = True
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 245)
+        Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
+        Me.C1FlexGrid1.TabIndex = 48
+        Me.C1FlexGrid1.Tree.Column = 0
+        Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
         '
         'RegistroBindingNavigator
         '
@@ -1192,31 +1219,6 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel2.TabIndex = 1
         Me.C1SplitterPanel2.Text = "Listado de Registros"
         '
-        'C1FlexGrid1
-        '
-        Me.C1FlexGrid1.AllowDelete = True
-        Me.C1FlexGrid1.AllowEditing = False
-        Me.C1FlexGrid1.AllowFiltering = True
-        Me.C1FlexGrid1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.C1FlexGrid1.AutoResize = True
-        Me.C1FlexGridSearchPanel1.SetC1FlexGridSearchPanel(Me.C1FlexGrid1, Me.C1FlexGridSearchPanel1)
-        Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
-        Me.C1FlexGrid1.DataSource = Me.RegistroBindingSource
-        Me.C1FlexGrid1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexGrid1.Location = New System.Drawing.Point(0, 44)
-        Me.C1FlexGrid1.Name = "C1FlexGrid1"
-        Me.C1FlexGrid1.Rows.Count = 1
-        Me.C1FlexGrid1.Rows.DefaultSize = 16
-        Me.C1FlexGrid1.ShowCellLabels = True
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 245)
-        Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
-        Me.C1FlexGrid1.TabIndex = 48
-        Me.C1FlexGrid1.Tree.Column = 0
-        Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
-        '
         'C1FlexGridGroupPanel1
         '
         Me.C1FlexGridGroupPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1318,6 +1320,15 @@ Partial Class frmPrincipal
         '
         Me.ContactoTableAdapter.ClearBeforeFill = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(573, 233)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 103
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1332,13 +1343,13 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1.ResumeLayout(False)
         Me.C1SplitterPanel1.ResumeLayout(False)
         Me.C1SplitterPanel1.PerformLayout()
-        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1ChkPagado, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GpoPrincipal.ResumeLayout(False)
         Me.GpoPrincipal.PerformLayout()
+        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TxtPagado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1ChkPagado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1txtCosto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CboMun, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MunicipioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1359,6 +1370,7 @@ Partial Class frmPrincipal
         CType(Me.btnComentar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1txtNotas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NotasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistroBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RegistroBindingNavigator.ResumeLayout(False)
         Me.RegistroBindingNavigator.PerformLayout()
@@ -1368,7 +1380,6 @@ Partial Class frmPrincipal
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         Me.C1SplitterPanel2.ResumeLayout(False)
-        CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1462,4 +1473,5 @@ Partial Class frmPrincipal
     Friend WithEvents C1ChkPagado As C1.Win.C1Input.C1CheckBox
     Friend WithEvents C1TxtPagado As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1Button1 As C1.Win.C1Input.C1Button
+    Friend WithEvents Button2 As Button
 End Class

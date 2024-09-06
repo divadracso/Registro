@@ -39,22 +39,15 @@ Public Class frmSPago
 
 
 
-    Private Sub C1FlexGrid1_Click(sender As Object, e As EventArgs) Handles C1FlexReg.Click
 
-    End Sub
 
     Private Sub C1FlexGrid1_DataBindingComplete(sender As Object, e As EventArgs) Handles C1FlexReg.DataBindingComplete
         Console.WriteLine("Completado")
     End Sub
 
-    Private Sub C1Combo1_Validated(sender As Object, e As EventArgs) ' Handles C1Combo1.Validated
-        'Me.PagosTableAdapter.FillByContacto(ProDSet.Pagos, CInt(C1Combo1.SelectedValue.ToString))
-        'Me.RegistroTableAdapter.FillByContacto(ProDSet.Registro, CInt(C1Combo1.SelectedValue.ToString))
-        '' Me.C1FlexReg.Aggregate(sum)
-        'C1FlexReg.DataSource = RegistroBindingSource
-    End Sub
 
-    Private Sub C1Button1_Click(sender As Object, e As EventArgs) Handles c1btnSol.Click
+
+    Private Sub C1Button1_Click(sender As Object, e As EventArgs)
         ' Asumiendo que tienes un C1FlexGrid llamado flexGrid
         C1FlexReg.DataSource = RegistroBindingSource '.GetDataByContacto(CInt(C1Combo1.SelectedValue.ToString)) ' Tu fuente de datos
 

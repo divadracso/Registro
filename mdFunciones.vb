@@ -393,6 +393,24 @@ Module mdFunciones
             End If
         Next
     End Sub
+    'Public Sub CentrarControl(ctrl As Control)
+    '    ' Calcular la nueva posición del control para centrarlo
+    '    ctrl.Left = (ctrl.Parent.Width - ctrl.Width) / 2
+    '    'ctrl.Top = (Me.ClientSize.Height - ctrl.Height) / 2
+    'End Sub
+    Public Sub CentrarControl(ctrl As Control, Optional HV As String = "HV")
+        ' Calcular la nueva posición del control para centrarlo
+        If HV = "H" Or HV = "h" Then
+            ctrl.Left = (ctrl.Parent.Width - ctrl.Width) / 2
+        End If
+        If HV = "V" Or HV = "v" Then
+            ctrl.Top = (ctrl.Parent.Height - ctrl.Height) / 2
+        End If
+        If HV = "HV" Or HV = "Hv" Or HV = "hV" Or HV = "hv" Then
+            ctrl.Left = (ctrl.Parent.Width - ctrl.Width) / 2
+            ctrl.Top = (ctrl.Parent.Height - ctrl.Height) / 2
+        End If
+    End Sub
 
 
 End Module

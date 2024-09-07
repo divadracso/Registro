@@ -40,6 +40,7 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.GpoPrincipal = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.C1Button1 = New C1.Win.C1Input.C1Button()
         Me.C1TxtPagado = New C1.Win.C1Input.C1TextBox()
         Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -123,7 +124,7 @@ Partial Class frmPrincipal
         Me.TipoAvaTableAdapter = New Registro.ProDSetTableAdapters.TipoAvaTableAdapter()
         Me.MunicipioTableAdapter = New Registro.ProDSetTableAdapters.MunicipioTableAdapter()
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GpoPrincipal2 = New System.Windows.Forms.GroupBox()
         IdLabel = New System.Windows.Forms.Label()
         Status_del_avalúoLabel = New System.Windows.Forms.Label()
         Status_del_pagoLabel = New System.Windows.Forms.Label()
@@ -177,6 +178,7 @@ Partial Class frmPrincipal
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GpoPrincipal2.SuspendLayout()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -376,6 +378,15 @@ Partial Class frmPrincipal
         Me.GpoPrincipal.Size = New System.Drawing.Size(758, 253)
         Me.GpoPrincipal.TabIndex = 63
         Me.GpoPrincipal.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(573, 233)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 103
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'C1Button1
         '
@@ -793,23 +804,20 @@ Partial Class frmPrincipal
         'C1FlexGrid1
         '
         Me.C1FlexGrid1.AllowDelete = True
-        Me.C1FlexGrid1.AllowEditing = False
         Me.C1FlexGrid1.AllowFiltering = True
-        Me.C1FlexGrid1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.C1FlexGrid1.AutoResize = True
         Me.C1FlexGridSearchPanel1.SetC1FlexGridSearchPanel(Me.C1FlexGrid1, Me.C1FlexGridSearchPanel1)
         Me.C1FlexGrid1.ColumnInfo = resources.GetString("C1FlexGrid1.ColumnInfo")
         Me.C1FlexGrid1.DataSource = Me.RegistroBindingSource
+        Me.C1FlexGrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.C1FlexGrid1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.C1FlexGrid1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexGrid1.Location = New System.Drawing.Point(0, 44)
+        Me.C1FlexGrid1.Location = New System.Drawing.Point(3, 51)
         Me.C1FlexGrid1.Name = "C1FlexGrid1"
         Me.C1FlexGrid1.Rows.Count = 1
         Me.C1FlexGrid1.Rows.DefaultSize = 16
         Me.C1FlexGrid1.ShowCellLabels = True
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(764, 245)
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(758, 235)
         Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
         Me.C1FlexGrid1.TabIndex = 48
         Me.C1FlexGrid1.Tree.Column = 0
@@ -1209,11 +1217,12 @@ Partial Class frmPrincipal
         'C1SplitterPanel2
         '
         Me.C1SplitterPanel2.AutoScroll = True
-        Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGrid1)
-        Me.C1SplitterPanel2.Controls.Add(Me.C1FlexGridGroupPanel1)
+        Me.C1SplitterPanel2.Controls.Add(Me.GpoPrincipal2)
         Me.C1SplitterPanel2.Height = 310
+        Me.C1SplitterPanel2.KeepRelativeSize = False
         Me.C1SplitterPanel2.Location = New System.Drawing.Point(0, 317)
         Me.C1SplitterPanel2.Name = "C1SplitterPanel2"
+        Me.C1SplitterPanel2.Resizable = False
         Me.C1SplitterPanel2.Size = New System.Drawing.Size(764, 289)
         Me.C1SplitterPanel2.SizeRatio = 48.311R
         Me.C1SplitterPanel2.TabIndex = 1
@@ -1221,13 +1230,11 @@ Partial Class frmPrincipal
         '
         'C1FlexGridGroupPanel1
         '
-        Me.C1FlexGridGroupPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.C1FlexGridGroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.C1FlexGridGroupPanel1.FlexGrid = Me.C1FlexGrid1
-        Me.C1FlexGridGroupPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.C1FlexGridGroupPanel1.Location = New System.Drawing.Point(3, 16)
         Me.C1FlexGridGroupPanel1.Name = "C1FlexGridGroupPanel1"
-        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(764, 35)
+        Me.C1FlexGridGroupPanel1.Size = New System.Drawing.Size(758, 35)
         Me.C1FlexGridGroupPanel1.TabIndex = 49
         Me.C1FlexGridGroupPanel1.Text = "Filtros"
         '
@@ -1320,14 +1327,16 @@ Partial Class frmPrincipal
         '
         Me.ContactoTableAdapter.ClearBeforeFill = True
         '
-        'Button2
+        'GpoPrincipal2
         '
-        Me.Button2.Location = New System.Drawing.Point(573, 233)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 103
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGrid1)
+        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGridGroupPanel1)
+        Me.GpoPrincipal2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GpoPrincipal2.Location = New System.Drawing.Point(0, 0)
+        Me.GpoPrincipal2.Name = "GpoPrincipal2"
+        Me.GpoPrincipal2.Size = New System.Drawing.Size(764, 289)
+        Me.GpoPrincipal2.TabIndex = 50
+        Me.GpoPrincipal2.TabStop = False
         '
         'frmPrincipal
         '
@@ -1384,6 +1393,7 @@ Partial Class frmPrincipal
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GpoPrincipal2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1474,4 +1484,5 @@ Partial Class frmPrincipal
     Friend WithEvents C1TxtPagado As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1Button1 As C1.Win.C1Input.C1Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents GpoPrincipal2 As GroupBox
 End Class

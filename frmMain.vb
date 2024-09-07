@@ -77,4 +77,11 @@
         frmPrincipal.WindowState = FormWindowState.Maximized
         frmPrincipal.Show()
     End Sub
+
+    Private Sub PagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagosToolStripMenuItem.Click
+        frmPPC.MdiParent = Me
+        frmPPC.MdiParent = Me
+        frmPPC.WindowState = FormWindowState.Maximized
+        frmPPC.Show()
+    End Sub
 End Class

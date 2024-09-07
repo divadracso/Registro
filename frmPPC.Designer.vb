@@ -34,13 +34,13 @@ Partial Class frmPPC
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.C1SplitContainer1 = New C1.Win.C1SplitContainer.C1SplitContainer()
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.C1FlexC = New C1.Win.C1FlexGrid.C1FlexGrid()
         Me.C1Combo1 = New C1.Win.C1List.C1Combo()
         Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RegistroTableAdapter = New Registro.ProDSetTableAdapters.RegistroTableAdapter()
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
         Me.TableAdapterManager = New Registro.ProDSetTableAdapters.TableAdapterManager()
         Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
-        Me.C1FlexC = New C1.Win.C1FlexGrid.C1FlexGrid()
         CType(Me.C1FlexReg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,9 +50,9 @@ Partial Class frmPPC
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
+        CType(Me.C1FlexC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1FlexC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'C1FlexReg
@@ -164,6 +164,18 @@ Partial Class frmPPC
         Me.C1SplitterPanel1.TabIndex = 0
         Me.C1SplitterPanel1.Text = "Panel 1"
         '
+        'C1FlexC
+        '
+        Me.C1FlexC.ColumnInfo = "10,1,0,0,0,-1,Columns:"
+        Me.C1FlexC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.C1FlexC.Location = New System.Drawing.Point(3, 428)
+        Me.C1FlexC.Name = "C1FlexC"
+        Me.C1FlexC.Rows.DefaultSize = 16
+        Me.C1FlexC.Size = New System.Drawing.Size(643, 119)
+        Me.C1FlexC.StyleInfo = resources.GetString("C1FlexC.StyleInfo")
+        Me.C1FlexC.TabIndex = 11
+        Me.C1FlexC.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
+        '
         'C1Combo1
         '
         Me.C1Combo1.AllowColMove = False
@@ -231,18 +243,6 @@ Partial Class frmPPC
         '
         Me.PagosTableAdapter.ClearBeforeFill = True
         '
-        'C1FlexC
-        '
-        Me.C1FlexC.ColumnInfo = "10,1,0,0,0,-1,Columns:"
-        Me.C1FlexC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexC.Location = New System.Drawing.Point(3, 428)
-        Me.C1FlexC.Name = "C1FlexC"
-        Me.C1FlexC.Rows.DefaultSize = 16
-        Me.C1FlexC.Size = New System.Drawing.Size(643, 119)
-        Me.C1FlexC.StyleInfo = resources.GetString("C1FlexC.StyleInfo")
-        Me.C1FlexC.TabIndex = 11
-        Me.C1FlexC.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
-        '
         'frmPPC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,7 +251,7 @@ Partial Class frmPPC
         Me.Controls.Add(Me.C1SplitContainer1)
         Me.Name = "frmPPC"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmSPago"
+        Me.Text = "frmPPC"
         CType(Me.C1FlexReg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -262,9 +262,9 @@ Partial Class frmPPC
         Me.C1SplitContainer1.ResumeLayout(False)
         Me.C1SplitterPanel1.ResumeLayout(False)
         Me.C1SplitterPanel1.PerformLayout()
+        CType(Me.C1FlexC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1Combo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1FlexC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

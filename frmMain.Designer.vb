@@ -24,12 +24,13 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.AbrirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbrirToolStripMenuItem, Me.PagosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(774, 24)
@@ -41,6 +42,12 @@ Partial Class frmMain
         Me.AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
         Me.AbrirToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
         Me.AbrirToolStripMenuItem.Text = "Abrir"
+        '
+        'PagosToolStripMenuItem
+        '
+        Me.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem"
+        Me.PagosToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.PagosToolStripMenuItem.Text = "Pagos"
         '
         'frmMain
         '
@@ -61,4 +68,5 @@ Partial Class frmMain
     End Sub
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AbrirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PagosToolStripMenuItem As ToolStripMenuItem
 End Class

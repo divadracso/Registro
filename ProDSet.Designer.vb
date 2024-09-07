@@ -1372,6 +1372,8 @@ Partial Public Class ProDSet
             Me.columnCampo10.MaxLength = 255
             Me.columnStatus_del_pago.MaxLength = 255
             Me.columnStatus_del_avalúo.MaxLength = 255
+            Me.columnCosto.DefaultValue = CType(0D,Decimal)
+            Me.columnpagos.DefaultValue = CType(0D,Decimal)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7021,12 +7023,9 @@ Namespace ProDSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idCont", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idCont", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT       Pagos.Cant, Registro.Folio, Registro.Fecha, Registro.Domicilio, Regi"& _ 
-                "stro.Municipio, Registro.[tipo de avalúo], Registro.[Solicitado por], Registro.["& _ 
-                "Nombre cliente], Registro.[Status del pago], Registro.[Status del avalúo], "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
-                "                      Pagos.Fecha AS FechaPago, Pagos.idCont, Registro.pagos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
-                "OM            (Registro INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Pagos ON Registro.I"& _ 
-                "d = Pagos.idAva)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Registro.[Solicitado por] = ?)"
+            Me._commandCollection(3).CommandText = "SELECT Campo10, Costo, Domicilio, Fecha, Folio, Id, Municipio, [Nombre cliente], "& _ 
+                "[Núm escr o de cliente], [Solicitado por], [Status del avalúo], [Status del pago"& _ 
+                "], pagos, [tipo de avalúo] FROM Registro WHERE ([Solicitado por] = ?)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Solicitado_por", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Solicitado por", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()

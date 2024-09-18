@@ -301,13 +301,15 @@ Public Class frmPPC
         Dim cellStyle As CellStyle = C1FlexGrid1.Styles.Add("CurrencyStyle")
         cellStyle.Format = "C2" ' Formato de moneda con 2 decimales
         For columnIndex = 0 To C1FlexGrid2.Cols.Count - 1
-            If columnIndex <> 1 And columnIndex <> 8 And columnIndex <> 12 And columnIndex <> C1FlexGrid2.Cols.Count - 3 Then
+            If columnIndex <> 8 And columnIndex < (C1FlexGrid2.Cols.Count - 7) Then '<> 1 And columnIndex <> 8 And columnIndex <> 12 And columnIndex > 12 And columnIndex
                 C1FlexGrid2.Cols(columnIndex).Visible = False
             End If
         Next
         ' Aplicar el estilo a toda la columna
         For fila As Integer = 1 To C1FlexGrid2.Rows.Count - 1
             C1FlexGrid2.SetCellStyle(fila, "Total2", cellStyle)
+            C1FlexGrid2.SetCellStyle(fila, "Costo", cellStyle)
+            C1FlexGrid2.SetCellStyle(fila, "Adeuda", cellStyle)
         Next
 
         C1FlexGrid2.AutoSizeCols() ' = True
@@ -316,4 +318,11 @@ Public Class frmPPC
 
     End Sub
 
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    '    'DialogResult = frmDgoPagos.ShowDialog()
+    '    'MsgBox(DialogResult)
+    '    'If DialogResult = 1 Then
+    '    '    guardar()
+    '    'End If
+    'End Sub
 End Class

@@ -384,7 +384,7 @@ Public Class frmPrincipal
         For Each row As DataRow In dt.Rows
             If row("id") = id + 1 Then
                 row("Status del Avalúo") = newValor
-                Console.WriteLine("ID: " & row("id") & ", Status: " & row("Status del Avalúo"))
+                'Console.WriteLine("ID: " & row("id") & ", Status: " & row("Status del Avalúo"))
                 Exit For
             End If
         Next

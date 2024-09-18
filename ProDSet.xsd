@@ -296,7 +296,7 @@ HAVING       (Pagos.idAva = ?)</CommandText>
               <DbSource ConnectionRef="ProConnStr (MySettings)" DbObjectName="Registro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ScalarQueryAgrupa" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="ScalarQueryAgrupa" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ScalarQueryAgrupa">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT       COUNT([tipo de avalúo]) AS Total, [Solicitado por], SUM(pagos) AS Total2
+                    <CommandText>SELECT        COUNT([tipo de avalúo]) AS Total, [Solicitado por], SUM(pagos) AS Total2, SUM(Costo) AS Costo, SUM(Costo - pagos) AS Adeuda
 FROM            Registro
 GROUP BY [Solicitado por]</CommandText>
                     <Parameters />
@@ -985,7 +985,7 @@ WHERE        (Pagos.idCont = ?)</CommandText>
               <xs:element name="Pagos" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowClassName="PagosRow" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                   <xs:appinfo>
-                    <msdata:Relationship name="Registro_Pagos" msdata:parent="Registro" msdata:child="Pagos" msdata:parentkey="Id" msdata:childkey="idAva" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Pagos" msprop:Generator_RelationVarName="relationRegistro_Pagos" msprop:Generator_ChildPropName="GetPagosRows" msprop:Generator_UserRelationName="Registro_Pagos" msprop:Generator_ParentPropName="RegistroRow" />
+                    <msdata:Relationship name="Registro_Pagos" msdata:parent="Registro" msdata:child="Pagos" msdata:parentkey="Id" msdata:childkey="idAva" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Pagos" msprop:Generator_RelationVarName="relationRegistro_Pagos" msprop:Generator_ChildPropName="GetPagosRows" msprop:Generator_ParentPropName="RegistroRow" msprop:Generator_UserRelationName="Registro_Pagos" />
                   </xs:appinfo>
                 </xs:annotation>
                 <xs:complexType>
@@ -1001,7 +1001,7 @@ WHERE        (Pagos.idCont = ?)</CommandText>
               <xs:element name="Notas" msprop:Generator_RowEvHandlerName="NotasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasRowDeleted" msprop:Generator_RowDeletingName="NotasRowDeleting" msprop:Generator_RowEvArgName="NotasRowChangeEvent" msprop:Generator_TablePropName="Notas" msprop:Generator_RowChangedName="NotasRowChanged" msprop:Generator_UserTableName="Notas" msprop:Generator_RowChangingName="NotasRowChanging" msprop:Generator_RowClassName="NotasRow" msprop:Generator_TableClassName="NotasDataTable" msprop:Generator_TableVarName="tableNotas" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                   <xs:appinfo>
-                    <msdata:Relationship name="Registro_Notas" msdata:parent="Registro" msdata:child="Notas" msdata:parentkey="Id" msdata:childkey="idRegistro" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Notas" msprop:Generator_RelationVarName="relationRegistro_Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_UserRelationName="Registro_Notas" msprop:Generator_ParentPropName="RegistroRow" />
+                    <msdata:Relationship name="Registro_Notas" msdata:parent="Registro" msdata:child="Notas" msdata:parentkey="Id" msdata:childkey="idRegistro" msprop:Generator_UserParentTable="Registro" msprop:Generator_UserChildTable="Notas" msprop:Generator_RelationVarName="relationRegistro_Notas" msprop:Generator_ChildPropName="GetNotasRows" msprop:Generator_ParentPropName="RegistroRow" msprop:Generator_UserRelationName="Registro_Notas" />
                   </xs:appinfo>
                 </xs:annotation>
                 <xs:complexType>

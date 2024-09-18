@@ -7037,8 +7037,9 @@ Namespace ProDSetTableAdapters
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("idAva", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "idAva", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "SELECT       COUNT([tipo de avalúo]) AS Total, [Solicitado por], SUM(pagos) AS To"& _ 
-                "tal2"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Registro"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY [Solicitado por]"
+            Me._commandCollection(5).CommandText = "SELECT        COUNT([tipo de avalúo]) AS Total, [Solicitado por], SUM(pagos) AS T"& _ 
+                "otal2, SUM(Costo) AS Costo, SUM(Costo - pagos) AS Adeuda"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Regist"& _ 
+                "ro"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY [Solicitado por]"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

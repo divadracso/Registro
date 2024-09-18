@@ -268,10 +268,10 @@ Module mdFunciones
             'Dim valsta = frmPrincipal.BindingNavigatorPositionItem1.Text ' txtdt.GetData.Item(index).Item("Status del avalúo").ToString()
             ' MsgBox(valsta)
             For Each radiob As Control In frmPrincipal.GpoStatus.Controls
-                Console.WriteLine("name radi" & radiob.Name)
+                ' Console.WriteLine("name radi" & radiob.Name)
                 If TypeOf radiob Is RadioButton Then
                     Dim but As RadioButton = radiob
-                    Console.WriteLine("val boton" & valsta)
+                    'Console.WriteLine("val boton" & valsta)
                     If but.Text = valsta Then
                         but.Checked = True
                         'If valsta = "Cancelado" Then
@@ -326,7 +326,7 @@ Module mdFunciones
         For i As Integer = 0 To dt.Rows.Count - 1
             If dt.Rows(i)(columnName).Equals(CInt(value)) Then
                 ' index = i
-                Console.WriteLine("index Encontrado" & i)
+                ' Console.WriteLine("index Encontrado" & i)
                 Return i
 
             End If
@@ -388,7 +388,7 @@ Module mdFunciones
             If row("idAva") = idAva Then
                 'row("IdContacto") =
                 row("idCont") = newValor
-                Console.WriteLine("ID: " & row("id"))
+                ' Console.WriteLine("ID: " & row("id"))
                 'Exit For
             End If
         Next

@@ -75,6 +75,8 @@
         frmPrincipal.MdiParent = Me
         frmSPago.MdiParent = Me
         frmPrincipal.WindowState = FormWindowState.Maximized
+
+        frmTiempo.ShowDialog()
         frmPrincipal.Show()
     End Sub
 

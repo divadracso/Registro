@@ -272,7 +272,7 @@ Public Class frmPPC
         C1FlexGrid1.AutoSizeCols() ' = True
         C1FlexReg.AutoSizeRows()
         C1FlexGrid1.AutoSizeRows()
-#Region "FlexGrid por Cliente"
+#Region "FlexGrid por Cliente" 'C1FlexC
         Dim dt2 As New DataTable
         dt2 = Me.RegistroTableAdapter.GetDataByNcontacto(C1Combo1.SelectedText)
         Dim reg As New BindingSource
@@ -285,6 +285,22 @@ Public Class frmPPC
 
         'Me.RegistroTableAdapter.FillByContacto(ProDSet.Registro, CInt(C1Combo1.SelectedValue.ToString))
         C1FlexC.DataSource = reg
+
+        'formato de pesos
+
+        C1FlexC.Cols("Costo").Format = "C2"
+        C1FlexC.Cols("Pagos").Format = "C2"
+
+        'estilo.Font = fuente
+        'C1FlexReg.Rows.Add()
+        '' C1FlexReg.Font = New Font("Arial", 12, FontStyle.Bold)
+        'C1FlexReg.Item(nuevaFila, 4) = "Gran Total" ' Puedes ajustar esto según la estructura de tus datos
+        'C1FlexReg.Item(nuevaFila, "Cant") = suma
+        ''C1FlexReg.Font = New Font("Arial", 12, FontStyle.Bold)
+        'C1FlexReg.SetCellStyle(nuevaFila, 4, estilo)
+        'C1FlexReg.SetCellStyle(nuevaFila, "Cant", estilo)
+        C1FlexC.AutoSizeCols() ' = True
+        C1FlexC.AutoSizeRows()
 #End Region
     End Sub
 
@@ -305,6 +321,10 @@ Public Class frmPPC
                 C1FlexGrid2.Cols(columnIndex).Visible = False
             End If
         Next
+        C1FlexGrid2.Cols("pagos").Visible = False
+        C1FlexGrid2.Cols("Total").Caption = "Cant. Avalúos"
+        C1FlexGrid2.Cols("Total2").Caption = "Total Pagado"
+        C1FlexGrid2.Cols("Costo").Caption = "Total Solicitado"
         ' Aplicar el estilo a toda la columna
         For fila As Integer = 1 To C1FlexGrid2.Rows.Count - 1
             C1FlexGrid2.SetCellStyle(fila, "Total2", cellStyle)

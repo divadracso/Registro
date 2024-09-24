@@ -49,9 +49,11 @@ Module mdFunciones
         Next row
     End Sub
     Public Sub guardar()
+        ' frmPrincipal.idCont = frmPrincipal.C1FlexGrid1(frmPrincipal.C1FlexGrid1.Row, "id").ToString()
+
         frmPrincipal.Validate()
         frmPrincipal.RegistroPagosBindingSource.EndEdit()
-        actualizaPagos(frmPrincipal.ProDSet.Pagos, frmPrincipal.IdTextBox.Text, IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text))
+        actualizaPagos(frmPrincipal.ProDSet.Pagos, frmPrincipal.idCont, IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text))
 
         'frmPrincipal.C1FlexPagos.Item(1, "idCont") = IdContacto(frmPrincipal.ProDSet.Contacto, frmPrincipal.C1CboSol.Text)
 
@@ -257,7 +259,8 @@ Module mdFunciones
         Dim valbusc = CInt(frmPrincipal.BindingNavigatorPositionItem.Text)
         'Dim txtdt = frmPrincipal.RegistroTableAdapter.GetData
         ' Dim currentRow As DataRow = txtdt.Rows(1)
-        Dim index As Integer = FindRowIndex(dt, "id", valbusc)
+        Dim index As Integer = CInt(frmPrincipal.C1FlexGrid1(frmPrincipal.C1FlexGrid1.Row, "id").ToString())
+        'Dim index As Integer = FindRowIndex(dt, "id", valbusc)
 
         'Dim index As Integer = FindRowIndex(txtdt.GetData, "id", CInt(frmPrincipal.BindingNavigatorPositionItem.Text))
         If index > -1 Then
@@ -383,6 +386,8 @@ Module mdFunciones
         Next
         Return 0
     End Function
+
+
     Public Sub actualizaPagos(dtbuscar As DataTable, idAva As Integer, newValor As Integer)
         For Each row As DataRow In dtbuscar.Rows
             If row("idAva") = idAva Then

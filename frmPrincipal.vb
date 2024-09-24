@@ -3,14 +3,17 @@ Imports System.Data.SqlClient
 Imports System.Drawing.Imaging
 Imports System.Reflection.Emit
 Imports System.Threading
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports C1.Win
 Imports C1.Win.C1FlexGrid
 Imports C1.Win.C1Input
 Imports C1.Win.C1List
 Imports Registro.ProDSetTableAdapters
+Imports System.Windows.Forms
 
 Public Class frmPrincipal
+    Public idCont As String
 
     Private Sub RegistroBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles RegistroBindingNavigatorSaveItem.Click
 
@@ -133,7 +136,8 @@ Public Class frmPrincipal
 
         'End If
 
-
+        'IdTextBox.Name = "IdTextBox"
+        'IdTextBox.DataBindings.Add("Text", RegistroBindingSource, "id") ' = RegistroBindingSource. '.Item("id")
 
     End Sub
     Private Sub btnClosePanel_Click(sender As Object, e As EventArgs)
@@ -382,7 +386,7 @@ Public Class frmPrincipal
     End Sub
     Private Sub UpdateRecord(dt As DataTable, id As Integer, newValor As String)
         For Each row As DataRow In dt.Rows
-            If row("id") = id + 1 Then
+            If row("id") = id Then
                 row("Status del Avalúo") = newValor
                 'Console.WriteLine("ID: " & row("id") & ", Status: " & row("Status del Avalúo"))
                 Exit For
@@ -424,7 +428,7 @@ Public Class frmPrincipal
 
         'UpdateRecord(dt, FindRowIndex(dt, "id", CInt(BindingNavigatorPositionItem.Text)), sender.text)
         guardar()
-        UpdateRecord(dt, FindRowIndex(dt, "id", CInt(BindingNavigatorPositionItem.Text)), sender.text)
+        UpdateRecord(dt, CInt(C1FlexGrid1(C1FlexGrid1.Row, "id").ToString()), sender.text)
         cargaFlexgrid()
         ' UpdateRecord(dt, index, sender.text)
         agregaNotaRadio(sender.text)
@@ -467,11 +471,7 @@ Public Class frmPrincipal
         C1SplitterPanel2.Visible = False
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        frmSPago.MdiParent = Me.ParentForm
-        frmSPago.WindowState = FormWindowState.Maximized
-        frmSPago.Show()
-    End Sub
+
 
     Private Sub frmPrincipal_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         CentrarControl(GpoPrincipal, "H")
@@ -509,7 +509,7 @@ Public Class frmPrincipal
         If C1ChkPagado.Checked Then C1TxtPagado.Text = C1txtCosto.Text
     End Sub
 
-    Private Sub C1Button1_Click(sender As Object, e As EventArgs) Handles C1Button1.Click
+    Private Sub C1Button1_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'frmDgoPagos.MdiParent = Me.ParentForm
         'frmDgoPagos.TopLevel = True
         'frmSPago.WindowState = FormWindowState.Maximized
@@ -520,11 +520,16 @@ Public Class frmPrincipal
         End If
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs)
         frmPPC.MdiParent = Me.ParentForm
         frmPPC.WindowState = FormWindowState.Maximized
         frmPPC.Show()
     End Sub
+
+    Private Sub BindingNavigatorPositionItem_TextChanged_1(sender As Object, e As EventArgs) Handles BindingNavigatorPositionItem.TextChanged
+
+    End Sub
+    'Public IdTextBox As New System.Windows.Forms.TextBox()
 
 
 

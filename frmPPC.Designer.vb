@@ -41,12 +41,15 @@ Partial Class frmPPC
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
         Me.TableAdapterManager = New Registro.ProDSetTableAdapters.TableAdapterManager()
         Me.PagosTableAdapter = New Registro.ProDSetTableAdapters.PagosTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.C1FlexReg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
@@ -63,7 +66,7 @@ Partial Class frmPPC
         Me.C1FlexReg.ColumnInfo = resources.GetString("C1FlexReg.ColumnInfo")
         Me.C1FlexReg.DataSource = Me.RegistroBindingSource
         Me.C1FlexReg.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexReg.Location = New System.Drawing.Point(3, 165)
+        Me.C1FlexReg.Location = New System.Drawing.Point(3, 143)
         Me.C1FlexReg.Name = "C1FlexReg"
         Me.C1FlexReg.Rows.Count = 1
         Me.C1FlexReg.Rows.DefaultSize = 16
@@ -93,7 +96,7 @@ Partial Class frmPPC
         Me.C1FlexGrid1.Name = "C1FlexGrid1"
         Me.C1FlexGrid1.Rows.Count = 1
         Me.C1FlexGrid1.Rows.DefaultSize = 16
-        Me.C1FlexGrid1.Size = New System.Drawing.Size(643, 134)
+        Me.C1FlexGrid1.Size = New System.Drawing.Size(643, 107)
         Me.C1FlexGrid1.StyleInfo = resources.GetString("C1FlexGrid1.StyleInfo")
         Me.C1FlexGrid1.TabIndex = 6
         Me.C1FlexGrid1.VisualStyle = C1.Win.C1FlexGrid.VisualStyle.Office2010Blue
@@ -105,7 +108,7 @@ Partial Class frmPPC
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(663, 165)
+        Me.Button1.Location = New System.Drawing.Point(677, 30)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 7
@@ -116,7 +119,7 @@ Partial Class frmPPC
         '
         Me.C1FlexGrid2.ColumnInfo = "10,1,0,0,0,-1,Columns:"
         Me.C1FlexGrid2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexGrid2.Location = New System.Drawing.Point(3, 300)
+        Me.C1FlexGrid2.Location = New System.Drawing.Point(3, 30)
         Me.C1FlexGrid2.Name = "C1FlexGrid2"
         Me.C1FlexGrid2.Rows.DefaultSize = 16
         Me.C1FlexGrid2.Size = New System.Drawing.Size(643, 119)
@@ -126,9 +129,14 @@ Partial Class frmPPC
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(663, 212)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.C1FlexC)
+        Me.Panel1.Controls.Add(Me.C1FlexReg)
+        Me.Panel1.Controls.Add(Me.C1Combo1)
+        Me.Panel1.Controls.Add(Me.C1FlexGrid1)
+        Me.Panel1.Location = New System.Drawing.Point(3, 155)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(140, 64)
+        Me.Panel1.Size = New System.Drawing.Size(643, 454)
         Me.Panel1.TabIndex = 9
         '
         'C1SplitContainer1
@@ -150,25 +158,21 @@ Partial Class frmPPC
         '
         'C1SplitterPanel1
         '
-        Me.C1SplitterPanel1.Controls.Add(Me.C1FlexC)
-        Me.C1SplitterPanel1.Controls.Add(Me.C1Combo1)
+        Me.C1SplitterPanel1.Controls.Add(Me.Label1)
         Me.C1SplitterPanel1.Controls.Add(Me.Button1)
         Me.C1SplitterPanel1.Controls.Add(Me.C1FlexGrid2)
         Me.C1SplitterPanel1.Controls.Add(Me.Panel1)
-        Me.C1SplitterPanel1.Controls.Add(Me.C1FlexReg)
-        Me.C1SplitterPanel1.Controls.Add(Me.C1FlexGrid1)
         Me.C1SplitterPanel1.Height = 606
-        Me.C1SplitterPanel1.Location = New System.Drawing.Point(0, 21)
+        Me.C1SplitterPanel1.Location = New System.Drawing.Point(0, 0)
         Me.C1SplitterPanel1.Name = "C1SplitterPanel1"
-        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 585)
+        Me.C1SplitterPanel1.Size = New System.Drawing.Size(764, 606)
         Me.C1SplitterPanel1.TabIndex = 0
-        Me.C1SplitterPanel1.Text = "Panel 1"
         '
         'C1FlexC
         '
         Me.C1FlexC.ColumnInfo = "10,1,0,0,0,-1,Columns:"
         Me.C1FlexC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(91, Byte), Integer))
-        Me.C1FlexC.Location = New System.Drawing.Point(3, 428)
+        Me.C1FlexC.Location = New System.Drawing.Point(3, 278)
         Me.C1FlexC.Name = "C1FlexC"
         Me.C1FlexC.Rows.DefaultSize = 16
         Me.C1FlexC.Size = New System.Drawing.Size(643, 119)
@@ -205,7 +209,7 @@ Partial Class frmPPC
         Me.C1Combo1.RowSubDividerColor = System.Drawing.Color.DarkGray
         Me.C1Combo1.Size = New System.Drawing.Size(225, 21)
         Me.C1Combo1.TabIndex = 10
-        Me.C1Combo1.Text = "Clientes"
+        Me.C1Combo1.Text = "Contacto"
         Me.C1Combo1.ValueMember = "id"
         Me.C1Combo1.VisualStyle = C1.Win.C1List.VisualStyle.Office2010Blue
         Me.C1Combo1.PropBag = resources.GetString("C1Combo1.PropBag")
@@ -243,6 +247,24 @@ Partial Class frmPPC
         '
         Me.PagosTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(20, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Resumen por Contacto"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(234, 11)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(259, 13)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Detalle de Solicitado, Pagado y Adeudo por Contacto"
+        '
         'frmPPC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,6 +280,8 @@ Partial Class frmPPC
         CType(Me.C1FlexGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1FlexGrid2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.C1SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.C1SplitContainer1.ResumeLayout(False)
         Me.C1SplitterPanel1.ResumeLayout(False)
@@ -285,4 +309,6 @@ Partial Class frmPPC
     Friend WithEvents C1SplitterPanel1 As C1.Win.C1SplitContainer.C1SplitterPanel
     Friend WithEvents C1Combo1 As C1.Win.C1List.C1Combo
     Friend WithEvents C1FlexC As C1.Win.C1FlexGrid.C1FlexGrid
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

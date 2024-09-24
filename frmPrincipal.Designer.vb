@@ -23,12 +23,9 @@ Partial Class frmPrincipal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IdLabel As System.Windows.Forms.Label
         Dim Status_del_avalúoLabel As System.Windows.Forms.Label
         Dim Status_del_pagoLabel As System.Windows.Forms.Label
-        Dim Campo10Label As System.Windows.Forms.Label
         Dim FolioLabel As System.Windows.Forms.Label
-        Dim Fecha_ingr_a_catastro_o_de_auorizaciónLabel As System.Windows.Forms.Label
         Dim FechaLabel As System.Windows.Forms.Label
         Dim Nombre_clienteLabel As System.Windows.Forms.Label
         Dim DomicilioLabel As System.Windows.Forms.Label
@@ -41,13 +38,11 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1 = New C1.Win.C1SplitContainer.C1SplitterPanel()
         Me.GpoPrincipal = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.C1Button1 = New C1.Win.C1Input.C1Button()
         Me.C1TxtPagado = New C1.Win.C1Input.C1TextBox()
         Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProDSet = New Registro.ProDSet()
         Me.C1ChkPagado = New C1.Win.C1Input.C1CheckBox()
         Me.C1txtCosto = New C1.Win.C1Input.C1TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.C1CboMun = New C1.Win.C1List.C1Combo()
         Me.MunicipioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1CboTipo = New C1.Win.C1List.C1Combo()
@@ -57,8 +52,6 @@ Partial Class frmPrincipal
         Me.C1CboSol = New C1.Win.C1List.C1Combo()
         Me.ContactoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1TextBox9 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox8 = New C1.Win.C1Input.C1TextBox()
-        Me.C1TextBox7 = New C1.Win.C1Input.C1TextBox()
         Me.C1TextBox5 = New C1.Win.C1Input.C1TextBox()
         Me.C1TextBox2 = New C1.Win.C1Input.C1TextBox()
         Me.C1TextBox1 = New C1.Win.C1Input.C1TextBox()
@@ -85,7 +78,6 @@ Partial Class frmPrincipal
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.GpoStatus = New System.Windows.Forms.GroupBox()
         Me.rbtnCancel = New System.Windows.Forms.RadioButton()
         Me.rbtnProceso = New System.Windows.Forms.RadioButton()
@@ -109,6 +101,7 @@ Partial Class frmPrincipal
         Me.BindingNavigatorMoveLastItem1 = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.C1SplitterPanel2 = New C1.Win.C1SplitContainer.C1SplitterPanel()
+        Me.GpoPrincipal2 = New System.Windows.Forms.GroupBox()
         Me.C1FlexGridGroupPanel1 = New C1.Win.C1FlexGrid.C1FlexGridGroupPanel()
         Me.RegistroPagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PagosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -124,13 +117,9 @@ Partial Class frmPrincipal
         Me.TipoAvaTableAdapter = New Registro.ProDSetTableAdapters.TipoAvaTableAdapter()
         Me.MunicipioTableAdapter = New Registro.ProDSetTableAdapters.MunicipioTableAdapter()
         Me.ContactoTableAdapter = New Registro.ProDSetTableAdapters.ContactoTableAdapter()
-        Me.GpoPrincipal2 = New System.Windows.Forms.GroupBox()
-        IdLabel = New System.Windows.Forms.Label()
         Status_del_avalúoLabel = New System.Windows.Forms.Label()
         Status_del_pagoLabel = New System.Windows.Forms.Label()
-        Campo10Label = New System.Windows.Forms.Label()
         FolioLabel = New System.Windows.Forms.Label()
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel = New System.Windows.Forms.Label()
         FechaLabel = New System.Windows.Forms.Label()
         Nombre_clienteLabel = New System.Windows.Forms.Label()
         DomicilioLabel = New System.Windows.Forms.Label()
@@ -142,7 +131,6 @@ Partial Class frmPrincipal
         Me.C1SplitContainer1.SuspendLayout()
         Me.C1SplitterPanel1.SuspendLayout()
         Me.GpoPrincipal.SuspendLayout()
-        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TxtPagado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,8 +145,6 @@ Partial Class frmPrincipal
         CType(Me.C1CboSol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1TextBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.C1TextBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,21 +160,12 @@ Partial Class frmPrincipal
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.C1SplitterPanel2.SuspendLayout()
+        Me.GpoPrincipal2.SuspendLayout()
         CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GpoPrincipal2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(38, 41)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(19, 13)
-        IdLabel.TabIndex = 99
-        IdLabel.Text = "Id:"
         '
         'Status_del_avalúoLabel
         '
@@ -205,43 +182,25 @@ Partial Class frmPrincipal
         'Status_del_pagoLabel
         '
         Status_del_pagoLabel.AutoSize = True
-        Status_del_pagoLabel.Location = New System.Drawing.Point(0, 232)
+        Status_del_pagoLabel.Location = New System.Drawing.Point(53, 231)
         Status_del_pagoLabel.Name = "Status_del_pagoLabel"
         Status_del_pagoLabel.Size = New System.Drawing.Size(67, 13)
         Status_del_pagoLabel.TabIndex = 89
         Status_del_pagoLabel.Text = "Status pago:"
         '
-        'Campo10Label
-        '
-        Campo10Label.AutoSize = True
-        Campo10Label.Location = New System.Drawing.Point(0, 212)
-        Campo10Label.Name = "Campo10Label"
-        Campo10Label.Size = New System.Drawing.Size(55, 13)
-        Campo10Label.TabIndex = 88
-        Campo10Label.Text = "Campo10:"
-        '
         'FolioLabel
         '
         FolioLabel.AutoSize = True
-        FolioLabel.Location = New System.Drawing.Point(0, 35)
+        FolioLabel.Location = New System.Drawing.Point(88, 42)
         FolioLabel.Name = "FolioLabel"
         FolioLabel.Size = New System.Drawing.Size(32, 13)
         FolioLabel.TabIndex = 74
         FolioLabel.Text = "Folio:"
         '
-        'Fecha_ingr_a_catastro_o_de_auorizaciónLabel
-        '
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.AutoSize = True
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.Location = New System.Drawing.Point(0, 194)
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.Name = "Fecha_ingr_a_catastro_o_de_auorizaciónLabel"
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.Size = New System.Drawing.Size(191, 13)
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.TabIndex = 87
-        Fecha_ingr_a_catastro_o_de_auorizaciónLabel.Text = "Fecha ingr a catastro o de auorización:"
-        '
         'FechaLabel
         '
         FechaLabel.AutoSize = True
-        FechaLabel.Location = New System.Drawing.Point(0, 55)
+        FechaLabel.Location = New System.Drawing.Point(80, 66)
         FechaLabel.Name = "FechaLabel"
         FechaLabel.Size = New System.Drawing.Size(40, 13)
         FechaLabel.TabIndex = 76
@@ -250,7 +209,7 @@ Partial Class frmPrincipal
         'Nombre_clienteLabel
         '
         Nombre_clienteLabel.AutoSize = True
-        Nombre_clienteLabel.Location = New System.Drawing.Point(0, 175)
+        Nombre_clienteLabel.Location = New System.Drawing.Point(78, 210)
         Nombre_clienteLabel.Name = "Nombre_clienteLabel"
         Nombre_clienteLabel.Size = New System.Drawing.Size(42, 13)
         Nombre_clienteLabel.TabIndex = 86
@@ -259,7 +218,7 @@ Partial Class frmPrincipal
         'DomicilioLabel
         '
         DomicilioLabel.AutoSize = True
-        DomicilioLabel.Location = New System.Drawing.Point(0, 72)
+        DomicilioLabel.Location = New System.Drawing.Point(68, 90)
         DomicilioLabel.Name = "DomicilioLabel"
         DomicilioLabel.Size = New System.Drawing.Size(52, 13)
         DomicilioLabel.TabIndex = 78
@@ -268,7 +227,7 @@ Partial Class frmPrincipal
         'Solicitado_porLabel
         '
         Solicitado_porLabel.AutoSize = True
-        Solicitado_porLabel.Location = New System.Drawing.Point(0, 155)
+        Solicitado_porLabel.Location = New System.Drawing.Point(76, 186)
         Solicitado_porLabel.Name = "Solicitado_porLabel"
         Solicitado_porLabel.Size = New System.Drawing.Size(44, 13)
         Solicitado_porLabel.TabIndex = 85
@@ -277,7 +236,7 @@ Partial Class frmPrincipal
         'MunicipioLabel
         '
         MunicipioLabel.AutoSize = True
-        MunicipioLabel.Location = New System.Drawing.Point(0, 95)
+        MunicipioLabel.Location = New System.Drawing.Point(65, 114)
         MunicipioLabel.Name = "MunicipioLabel"
         MunicipioLabel.Size = New System.Drawing.Size(55, 13)
         MunicipioLabel.TabIndex = 79
@@ -286,7 +245,7 @@ Partial Class frmPrincipal
         'Núm_escr_o_de_clienteLabel
         '
         Núm_escr_o_de_clienteLabel.AutoSize = True
-        Núm_escr_o_de_clienteLabel.Location = New System.Drawing.Point(0, 134)
+        Núm_escr_o_de_clienteLabel.Location = New System.Drawing.Point(7, 162)
         Núm_escr_o_de_clienteLabel.Name = "Núm_escr_o_de_clienteLabel"
         Núm_escr_o_de_clienteLabel.Size = New System.Drawing.Size(113, 13)
         Núm_escr_o_de_clienteLabel.TabIndex = 84
@@ -295,7 +254,7 @@ Partial Class frmPrincipal
         'Tipo_de_avalúoLabel
         '
         Tipo_de_avalúoLabel.AutoSize = True
-        Tipo_de_avalúoLabel.Location = New System.Drawing.Point(0, 117)
+        Tipo_de_avalúoLabel.Location = New System.Drawing.Point(67, 138)
         Tipo_de_avalúoLabel.Name = "Tipo_de_avalúoLabel"
         Tipo_de_avalúoLabel.Size = New System.Drawing.Size(53, 13)
         Tipo_de_avalúoLabel.TabIndex = 82
@@ -339,32 +298,24 @@ Partial Class frmPrincipal
         'GpoPrincipal
         '
         Me.GpoPrincipal.Controls.Add(Me.Button2)
-        Me.GpoPrincipal.Controls.Add(Me.C1Button1)
         Me.GpoPrincipal.Controls.Add(Me.C1TxtPagado)
         Me.GpoPrincipal.Controls.Add(Me.C1ChkPagado)
         Me.GpoPrincipal.Controls.Add(Me.C1txtCosto)
-        Me.GpoPrincipal.Controls.Add(Me.Button1)
         Me.GpoPrincipal.Controls.Add(Me.C1CboMun)
         Me.GpoPrincipal.Controls.Add(Me.C1CboTipo)
         Me.GpoPrincipal.Controls.Add(Me.C1CboCli)
         Me.GpoPrincipal.Controls.Add(Me.C1CboSol)
         Me.GpoPrincipal.Controls.Add(Me.C1TextBox9)
-        Me.GpoPrincipal.Controls.Add(Me.C1TextBox8)
-        Me.GpoPrincipal.Controls.Add(Me.C1TextBox7)
         Me.GpoPrincipal.Controls.Add(Me.C1TextBox5)
         Me.GpoPrincipal.Controls.Add(Me.C1TextBox2)
         Me.GpoPrincipal.Controls.Add(Me.C1TextBox1)
         Me.GpoPrincipal.Controls.Add(Me.C1DateSol)
-        Me.GpoPrincipal.Controls.Add(Fecha_ingr_a_catastro_o_de_auorizaciónLabel)
         Me.GpoPrincipal.Controls.Add(Me.Panel1)
         Me.GpoPrincipal.Controls.Add(Me.C1FlexGridSearchPanel1)
-        Me.GpoPrincipal.Controls.Add(IdLabel)
         Me.GpoPrincipal.Controls.Add(Me.RegistroBindingNavigator)
-        Me.GpoPrincipal.Controls.Add(Me.IdTextBox)
         Me.GpoPrincipal.Controls.Add(Me.GpoStatus)
         Me.GpoPrincipal.Controls.Add(Me.txtPagos)
         Me.GpoPrincipal.Controls.Add(Status_del_pagoLabel)
-        Me.GpoPrincipal.Controls.Add(Campo10Label)
         Me.GpoPrincipal.Controls.Add(FolioLabel)
         Me.GpoPrincipal.Controls.Add(FechaLabel)
         Me.GpoPrincipal.Controls.Add(Nombre_clienteLabel)
@@ -387,16 +338,6 @@ Partial Class frmPrincipal
         Me.Button2.TabIndex = 103
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'C1Button1
-        '
-        Me.C1Button1.Location = New System.Drawing.Point(683, 184)
-        Me.C1Button1.Name = "C1Button1"
-        Me.C1Button1.Size = New System.Drawing.Size(75, 23)
-        Me.C1Button1.TabIndex = 65
-        Me.C1Button1.Text = "C1Button1"
-        Me.C1Button1.UseVisualStyleBackColor = True
-        Me.C1Button1.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
         'C1TxtPagado
         '
@@ -443,7 +384,7 @@ Partial Class frmPrincipal
         Me.C1ChkPagado.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Status del pago", True))
         Me.C1ChkPagado.DataType = GetType(Char)
         Me.C1ChkPagado.ForeColor = System.Drawing.Color.Black
-        Me.C1ChkPagado.Location = New System.Drawing.Point(161, 227)
+        Me.C1ChkPagado.Location = New System.Drawing.Point(126, 227)
         Me.C1ChkPagado.Name = "C1ChkPagado"
         Me.C1ChkPagado.Padding = New System.Windows.Forms.Padding(1)
         Me.C1ChkPagado.Size = New System.Drawing.Size(68, 23)
@@ -481,15 +422,6 @@ Partial Class frmPrincipal
         Me.C1txtCosto.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         Me.C1txtCosto.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(275, 36)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 98
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'C1CboMun
         '
         Me.C1CboMun.AllowColSelect = True
@@ -508,7 +440,7 @@ Partial Class frmPrincipal
         Me.C1CboMun.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
         Me.C1CboMun.Images.Add(CType(resources.GetObject("C1CboMun.Images"), System.Drawing.Image))
         Me.C1CboMun.ItemHeight = 13
-        Me.C1CboMun.Location = New System.Drawing.Point(161, 93)
+        Me.C1CboMun.Location = New System.Drawing.Point(126, 114)
         Me.C1CboMun.MatchEntryTimeout = CType(2000, Long)
         Me.C1CboMun.MaxDropDownItems = CType(5, Short)
         Me.C1CboMun.MaxLength = 32767
@@ -545,7 +477,7 @@ Partial Class frmPrincipal
         Me.C1CboTipo.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
         Me.C1CboTipo.Images.Add(CType(resources.GetObject("C1CboTipo.Images"), System.Drawing.Image))
         Me.C1CboTipo.ItemHeight = 13
-        Me.C1CboTipo.Location = New System.Drawing.Point(161, 113)
+        Me.C1CboTipo.Location = New System.Drawing.Point(126, 137)
         Me.C1CboTipo.MatchEntryTimeout = CType(2000, Long)
         Me.C1CboTipo.MaxDropDownItems = CType(5, Short)
         Me.C1CboTipo.MaxLength = 32767
@@ -581,7 +513,7 @@ Partial Class frmPrincipal
         Me.C1CboCli.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
         Me.C1CboCli.Images.Add(CType(resources.GetObject("C1CboCli.Images"), System.Drawing.Image))
         Me.C1CboCli.ItemHeight = 13
-        Me.C1CboCli.Location = New System.Drawing.Point(161, 171)
+        Me.C1CboCli.Location = New System.Drawing.Point(126, 207)
         Me.C1CboCli.MatchEntryTimeout = CType(2000, Long)
         Me.C1CboCli.MaxDropDownItems = CType(5, Short)
         Me.C1CboCli.MaxLength = 32767
@@ -620,7 +552,7 @@ Partial Class frmPrincipal
         Me.C1CboSol.FlatStyle = C1.Win.C1List.FlatModeEnum.Standard
         Me.C1CboSol.Images.Add(CType(resources.GetObject("C1CboSol.Images"), System.Drawing.Image))
         Me.C1CboSol.ItemHeight = 13
-        Me.C1CboSol.Location = New System.Drawing.Point(161, 152)
+        Me.C1CboSol.Location = New System.Drawing.Point(126, 184)
         Me.C1CboSol.MatchEntryTimeout = CType(2000, Long)
         Me.C1CboSol.MaxDropDownItems = CType(5, Short)
         Me.C1CboSol.MaxLength = 32767
@@ -642,44 +574,20 @@ Partial Class frmPrincipal
         '
         Me.C1TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.C1TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Status del pago", True))
-        Me.C1TextBox9.Location = New System.Drawing.Point(161, 230)
+        Me.C1TextBox9.Location = New System.Drawing.Point(226, 230)
         Me.C1TextBox9.Name = "C1TextBox9"
-        Me.C1TextBox9.Size = New System.Drawing.Size(200, 18)
+        Me.C1TextBox9.Size = New System.Drawing.Size(100, 18)
         Me.C1TextBox9.TabIndex = 83
         Me.C1TextBox9.Tag = Nothing
         Me.C1TextBox9.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         Me.C1TextBox9.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox8
-        '
-        Me.C1TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Campo10", True))
-        Me.C1TextBox8.Location = New System.Drawing.Point(161, 210)
-        Me.C1TextBox8.Name = "C1TextBox8"
-        Me.C1TextBox8.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox8.TabIndex = 81
-        Me.C1TextBox8.Tag = Nothing
-        Me.C1TextBox8.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox8.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        '
-        'C1TextBox7
-        '
-        Me.C1TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.C1TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Fecha ingr a catastro o de auorización", True))
-        Me.C1TextBox7.Location = New System.Drawing.Point(161, 190)
-        Me.C1TextBox7.Name = "C1TextBox7"
-        Me.C1TextBox7.Size = New System.Drawing.Size(200, 18)
-        Me.C1TextBox7.TabIndex = 80
-        Me.C1TextBox7.Tag = Nothing
-        Me.C1TextBox7.VisualStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
-        Me.C1TextBox7.VisualStyleBaseStyle = C1.Win.C1Input.VisualStyle.Office2010Blue
         '
         'C1TextBox5
         '
         Me.C1TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.C1TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Núm escr o de cliente", True))
         Me.C1TextBox5.DataType = GetType(Double)
-        Me.C1TextBox5.Location = New System.Drawing.Point(161, 132)
+        Me.C1TextBox5.Location = New System.Drawing.Point(126, 160)
         Me.C1TextBox5.Name = "C1TextBox5"
         Me.C1TextBox5.Size = New System.Drawing.Size(200, 18)
         Me.C1TextBox5.TabIndex = 77
@@ -691,7 +599,7 @@ Partial Class frmPrincipal
         '
         Me.C1TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.C1TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroBindingSource, "Domicilio", True))
-        Me.C1TextBox2.Location = New System.Drawing.Point(161, 73)
+        Me.C1TextBox2.Location = New System.Drawing.Point(126, 90)
         Me.C1TextBox2.Name = "C1TextBox2"
         Me.C1TextBox2.Size = New System.Drawing.Size(190, 18)
         Me.C1TextBox2.TabIndex = 75
@@ -717,7 +625,7 @@ Partial Class frmPrincipal
             Or C1.Win.C1Input.FormatInfoInheritFlags.TrimEnd) _
             Or C1.Win.C1Input.FormatInfoInheritFlags.CalendarType), C1.Win.C1Input.FormatInfoInheritFlags)
         Me.C1TextBox1.FormatType = C1.Win.C1Input.FormatTypeEnum.CustomFormat
-        Me.C1TextBox1.Location = New System.Drawing.Point(161, 33)
+        Me.C1TextBox1.Location = New System.Drawing.Point(126, 42)
         Me.C1TextBox1.Name = "C1TextBox1"
         Me.C1TextBox1.Size = New System.Drawing.Size(77, 18)
         Me.C1TextBox1.TabIndex = 72
@@ -736,7 +644,7 @@ Partial Class frmPrincipal
         Me.C1DateSol.FormatType = C1.Win.C1Input.FormatTypeEnum.ShortDate
         Me.C1DateSol.GapHeight = 0
         Me.C1DateSol.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.C1DateSol.Location = New System.Drawing.Point(161, 53)
+        Me.C1DateSol.Location = New System.Drawing.Point(126, 66)
         Me.C1DateSol.Name = "C1DateSol"
         Me.C1DateSol.Size = New System.Drawing.Size(99, 18)
         Me.C1DateSol.TabIndex = 73
@@ -842,7 +750,7 @@ Partial Class frmPrincipal
         Me.RegistroBindingNavigator.Name = "RegistroBindingNavigator"
         Me.RegistroBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
         Me.RegistroBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.RegistroBindingNavigator.Size = New System.Drawing.Size(417, 25)
+        Me.RegistroBindingNavigator.Size = New System.Drawing.Size(448, 25)
         Me.RegistroBindingNavigator.TabIndex = 0
         Me.RegistroBindingNavigator.Text = "BindingNavigator1"
         '
@@ -956,14 +864,6 @@ Partial Class frmPrincipal
         Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 25)
-        '
-        'IdTextBox
-        '
-        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "Id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(63, 38)
-        Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(58, 20)
-        Me.IdTextBox.TabIndex = 100
         '
         'GpoStatus
         '
@@ -1106,7 +1006,7 @@ Partial Class frmPrincipal
         'txtPagos
         '
         Me.txtPagos.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RegistroBindingSource, "pagos", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
-        Me.txtPagos.Location = New System.Drawing.Point(565, 189)
+        Me.txtPagos.Location = New System.Drawing.Point(683, 184)
         Me.txtPagos.Name = "txtPagos"
         Me.txtPagos.Size = New System.Drawing.Size(75, 20)
         Me.txtPagos.TabIndex = 90
@@ -1228,6 +1128,17 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel2.TabIndex = 1
         Me.C1SplitterPanel2.Text = "Listado de Registros"
         '
+        'GpoPrincipal2
+        '
+        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGrid1)
+        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGridGroupPanel1)
+        Me.GpoPrincipal2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GpoPrincipal2.Location = New System.Drawing.Point(0, 0)
+        Me.GpoPrincipal2.Name = "GpoPrincipal2"
+        Me.GpoPrincipal2.Size = New System.Drawing.Size(764, 289)
+        Me.GpoPrincipal2.TabIndex = 50
+        Me.GpoPrincipal2.TabStop = False
+        '
         'C1FlexGridGroupPanel1
         '
         Me.C1FlexGridGroupPanel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -1327,17 +1238,6 @@ Partial Class frmPrincipal
         '
         Me.ContactoTableAdapter.ClearBeforeFill = True
         '
-        'GpoPrincipal2
-        '
-        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGrid1)
-        Me.GpoPrincipal2.Controls.Add(Me.C1FlexGridGroupPanel1)
-        Me.GpoPrincipal2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GpoPrincipal2.Location = New System.Drawing.Point(0, 0)
-        Me.GpoPrincipal2.Name = "GpoPrincipal2"
-        Me.GpoPrincipal2.Size = New System.Drawing.Size(764, 289)
-        Me.GpoPrincipal2.TabIndex = 50
-        Me.GpoPrincipal2.TabStop = False
-        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1354,7 +1254,6 @@ Partial Class frmPrincipal
         Me.C1SplitterPanel1.PerformLayout()
         Me.GpoPrincipal.ResumeLayout(False)
         Me.GpoPrincipal.PerformLayout()
-        CType(Me.C1Button1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TxtPagado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProDSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1369,8 +1268,6 @@ Partial Class frmPrincipal
         CType(Me.C1CboSol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContactoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1TextBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.C1TextBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1TextBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1389,11 +1286,11 @@ Partial Class frmPrincipal
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
         Me.C1SplitterPanel2.ResumeLayout(False)
+        Me.GpoPrincipal2.ResumeLayout(False)
         CType(Me.RegistroPagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.miniToolStrip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GpoPrincipal2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1456,8 +1353,6 @@ Partial Class frmPrincipal
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnComentar As C1.Win.C1Input.C1Button
     Friend WithEvents C1txtNotas As C1.Win.C1Input.C1TextBox
-    Friend WithEvents IdTextBox As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents C1CboMun As C1.Win.C1List.C1Combo
     Friend WithEvents C1CboTipo As C1.Win.C1List.C1Combo
     Friend WithEvents C1CboCli As C1.Win.C1List.C1Combo
@@ -1472,8 +1367,6 @@ Partial Class frmPrincipal
     Friend WithEvents rbtnEnCe As RadioButton
     Friend WithEvents C1CboSol As C1.Win.C1List.C1Combo
     Friend WithEvents C1TextBox9 As C1.Win.C1Input.C1TextBox
-    Friend WithEvents C1TextBox8 As C1.Win.C1Input.C1TextBox
-    Friend WithEvents C1TextBox7 As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBox5 As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBox2 As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBox1 As C1.Win.C1Input.C1TextBox
@@ -1482,7 +1375,6 @@ Partial Class frmPrincipal
     Friend WithEvents C1txtCosto As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1ChkPagado As C1.Win.C1Input.C1CheckBox
     Friend WithEvents C1TxtPagado As C1.Win.C1Input.C1TextBox
-    Friend WithEvents C1Button1 As C1.Win.C1Input.C1Button
     Friend WithEvents Button2 As Button
     Friend WithEvents GpoPrincipal2 As GroupBox
 End Class
